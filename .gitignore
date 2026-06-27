@@ -51,3 +51,9 @@ desktop.ini
 # --- renv (add when implemented) ----------------------------
 # renv/library/
 # renv/staging/
+
+# LaTeX temporary files
+*.aux
+*.tex
+*.toc
+*.log

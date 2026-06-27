@@ -1,0 +1,416 @@
+---
+title: |
+  **Training Prescriptions and Perspectives in Elite Wheelchair Racing**  
+  **Prescrições de Treinamento e Perspectivas na Corrida em Cadeira de Rodas de Elite**
+subtitle: |
+  A Survey of Brazilian Athletes and Coaches  
+  *Um Levantamento com Atletas e Treinadores Brasileiros*
+author:
+  - name: Diego Antunes
+    affiliation: "Federal University of Santa Catarina (UFSC) / University of Vale do Itajaí (Univali)"
+  - name: Eduardo Leonel Martins Coroa
+    affiliation: "Brazilian Paralympic Committee (CPB)"
+  - name: Eduardo Marcel Fernandes Nascimento
+    affiliation: "Federal University of Santa Catarina (UFSC)"
+  - name: Rafael Lima Kons
+    affiliation: "Federal University of Bahia (UFBA)"
+  - name: Ricardo Dantas de Lucas
+    affiliation: "Federal University of Santa Catarina (UFSC)"
+  - name: Tiago Turnes
+    affiliation: "Federal University of Santa Catarina (UFSC)"
+date: today
+date-format: "MMMM D, YYYY"
+lang: en
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Contents / Sumário"
+    theme: cosmo
+    embed-resources: true
+    code-fold: true
+    fig-align: center
+    number-sections: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(tidyverse)
+library(gtsummary)
+library(knitr)
+library(kableExtra)
+
+# Load anonymized dataset
+df <- read_csv(
+  here::here("data", "clean_analysis_data.csv"),
+  locale = locale(encoding = "UTF-8"),
+  show_col_types = FALSE
+)
+
+# Standardize groups
+df <- df %>%
+  mutate(
+    Group = case_when(
+      str_detect(Group, "(?i)trainer|coach") ~ "Coach",
+      str_detect(Group, "(?i)athlete") ~ "WR Athlete",
+      TRUE ~ Group
+    ),
+    Group = factor(Group, levels = c("WR Athlete", "Coach"))
+  )
+
+df_athletes <- df %>% filter(Group == "WR Athlete")
+df_coaches  <- df %>% filter(Group == "Coach")
+```
+
+---
+
+## Overview / Visão Geral
+
+::: {.columns}
+::: {.column width="50%"}
+This report presents the main findings of a cross-sectional survey investigating training practices, knowledge sources, and challenges among Brazilian elite wheelchair racing (WR) athletes and coaches. Data were collected during the **2025 Brazilian Paralympic Athletics Championship**.
+
+The fully anonymized dataset and analysis scripts are available at:  
+🔗 [GitHub](https://github.com/antunesdiego/wheelchair_racing_survey) · [OSF](https://osf.io/INSERIR)
+:::
+::: {.column width="50%"}
+Este relatório apresenta os principais achados de um levantamento transversal sobre práticas de treinamento, fontes de conhecimento e desafios entre atletas e treinadores brasileiros de elite em corrida em cadeira de rodas. Os dados foram coletados durante o **Campeonato Brasileiro Paralímpico de Atletismo 2025**.
+
+O conjunto de dados anonimizados e os scripts de análise estão disponíveis em:  
+🔗 [GitHub](https://github.com/antunesdiego/wheelchair_racing_survey) · [OSF](https://osf.io/INSERIR)
+:::
+:::
+
+---
+
+## Sample / Amostra
+
+::: {.columns}
+::: {.column width="50%"}
+A total of **`r nrow(df_athletes)` athletes** and **`r nrow(df_coaches)` coaches** participated in this study, representing **66.6% of the total elite WR population** competing at the national level in Brazil (2025).
+:::
+::: {.column width="50%"}
+Um total de **`r nrow(df_athletes)` atletas** e **`r nrow(df_coaches)` treinadores** participaram deste estudo, representando **66,6% da população elite** de corrida em cadeira competindo em nível nacional no Brasil (2025).
+:::
+:::
+
+---
+
+## Table 1 — General Characteristics / Características Gerais {#sec-table1}
+
+::: {.columns}
+::: {.column width="50%"}
+Table 1 summarizes the demographic and competitive profiles of athletes and coaches, including gender, age, experience, educational background, competitive level, and perceived S&C effectiveness.
+:::
+::: {.column width="50%"}
+A Tabela 1 resume os perfis demográficos e competitivos de atletas e treinadores, incluindo gênero, idade, experiência, formação educacional, nível competitivo e percepção sobre a efetividade do T&C.
+:::
+:::
+
+```{r table1}
+df_t1 <- df %>%
+  mutate(
+    Raw_Effectiveness = coalesce(D3_Prog_Effectiveness, D4_Effectiveness),
+    Raw_Effectiveness = str_squish(Raw_Effectiveness),
+    Effectiveness = case_when(
+      str_detect(Raw_Effectiveness, "(?i)not ef")     ~ "Not effective",
+      str_detect(Raw_Effectiveness, "(?i)very ef")    ~ "Very effective",
+      str_detect(Raw_Effectiveness, "(?i)moderately") ~ "Moderately effective",
+      str_detect(Raw_Effectiveness, "(?i)slightly")   ~ "Slightly effective",
+      str_detect(Raw_Effectiveness, "(?i)^effective") ~ "Effective",
+      TRUE ~ NA_character_
+    ),
+    Effectiveness = factor(Effectiveness, levels = c(
+      "Not effective", "Slightly effective",
+      "Moderately effective", "Effective", "Very effective"
+    )),
+    Gender     = factor(B1_Gender, levels = c("Female", "Male")),
+    Comp_Level = factor(Comp_Level, levels = c(
+      "Local", "State", "Regional", "National", "International"
+    )),
+    Education = factor(C1_Education, levels = c(
+      "Elementary School", "Technical School", "High School",
+      "Bachelor's Degree", "Specialization", "Master's Degree"
+    ))
+  )
+
+df_t1 %>%
+  select(Group, Gender, B2_Age, B3_Experience_Years,
+         Education, Comp_Level, Effectiveness) %>%
+  tbl_summary(
+    by = Group,
+    label = list(
+      Gender              ~ "Gender / Gênero",
+      B2_Age              ~ "Age, years / Idade (anos)",
+      B3_Experience_Years ~ "Experience, years / Experiência (anos)",
+      Education           ~ "Educational Background / Formação",
+      Comp_Level          ~ "Competitive Level / Nível Competitivo",
+      Effectiveness       ~ "Perceived S&C Effectiveness / Efetividade Percebida do T&C"
+    ),
+    statistic = list(
+      all_continuous()  ~ "{mean} ± {sd}",
+      all_categorical() ~ "{n} ({p}%)"
+    ),
+    missing = "no"
+  ) %>%
+  add_overall() %>%
+  bold_labels() %>%
+  modify_header(label = "**Characteristic / Característica**") %>%
+  as_kable_extra(booktabs = TRUE) %>%
+  kable_styling(full_width = TRUE, font_size = 11)
+```
+
+---
+
+## Table 2 — Athlete Sport Profile / Perfil Esportivo dos Atletas {#sec-table2}
+
+::: {.columns}
+::: {.column width="50%"}
+Table 2 details the sport classification, impairment type, event distances, training supervision, equipment, and technology access of WR athletes.
+:::
+::: {.column width="50%"}
+A Tabela 2 detalha a classificação esportiva, tipo de deficiência, distâncias de prova, supervisão do treinamento, equipamentos e acesso à tecnologia dos atletas.
+:::
+:::
+
+```{r table2}
+df_athletes %>%
+  mutate(
+    Sport_Class  = factor(C2_Classification,
+                          levels = c("T52","T53","T54","T33","T34")),
+    Impairment   = factor(C4_Impairment_ICD),
+    Prescriber   = factor(C6_Prescriber),
+    Chair_Origin = factor(C8_Chair_Origin,
+                          levels = c("Customized", "Collective use")),
+    Maintenance  = factor(C7_Maintenance,
+                          levels = c("By myself", "Coach/Professional")),
+    Glove_Type   = factor(C9_Glove_Type),
+    Wheel_Type   = factor(C10_Wheel_Type),
+    Roller       = factor(C11_Roller_Available, levels = c("Yes","No"))
+  ) %>%
+  select(Sport_Class, Impairment, Prescriber,
+         Chair_Origin, Maintenance, Glove_Type, Wheel_Type, Roller) %>%
+  tbl_summary(
+    label = list(
+      Sport_Class  ~ "Sport Class / Classe Esportiva",
+      Impairment   ~ "Impairment Type / Tipo de Deficiência",
+      Prescriber   ~ "Training Prescriber / Prescritor do Treinamento",
+      Chair_Origin ~ "Racing Chair Origin / Origem da Cadeira",
+      Maintenance  ~ "WR Maintenance / Manutenção da Cadeira",
+      Glove_Type   ~ "Glove Type / Tipo de Luva",
+      Wheel_Type   ~ "Wheel Type / Tipo de Roda",
+      Roller       ~ "Access to Rollers / Acesso a Rolo"
+    ),
+    statistic = list(all_categorical() ~ "{n} ({p}%)"),
+    missing = "no"
+  ) %>%
+  bold_labels() %>%
+  modify_header(label = "**Athlete Characteristic / Característica do Atleta**") %>%
+  as_kable_extra(booktabs = TRUE) %>%
+  kable_styling(full_width = TRUE, font_size = 11)
+```
+
+---
+
+## Table 3 — Coach Profiles and Monitoring / Perfil dos Treinadores e Monitoramento {#sec-table3}
+
+::: {.columns}
+::: {.column width="50%"}
+Table 3 presents the professional profiles of coaches, including their roles, national certification level, S&C information search frequency, S&C prescriber, and load monitoring methods.
+:::
+::: {.column width="50%"}
+A Tabela 3 apresenta os perfis profissionais dos treinadores, incluindo funções, nível de certificação nacional, frequência de busca de informações sobre T&C, prescritor do T&C e métodos de monitoramento de carga.
+:::
+:::
+
+```{r table3}
+table3 <- tribble(
+  ~Characteristic,                                              ~n,   ~pct,
+  "**Role in the Team / Função na Equipe**",                   NA_integer_, NA_character_,
+  "Head Coach",                                                14L,  "88%",
+  "Assistant Coach",                                            1L,  "6.3%",
+  "Strength and Conditioning Coach",                            1L,  "6.3%",
+  "**National Certification Level (CPB)**",                    NA_integer_, NA_character_,
+  "Level 1",                                                    3L,  "19%",
+  "Level 2",                                                    5L,  "31%",
+  "Level 3",                                                    8L,  "50%",
+  "**Frequency of S&C Information Search / Frequência de Busca**", NA_integer_, NA_character_,
+  "Never / Nunca",                                              0L,  "0%",
+  "Rarely / Raramente",                                         0L,  "0%",
+  "Sometimes / Às vezes",                                       3L,  "19%",
+  "Commonly / Frequentemente",                                  9L,  "56%",
+  "Always / Sempre",                                            4L,  "25%",
+  "**Who Prescribes S&C / Quem Prescreve o T&C**",            NA_integer_, NA_character_,
+  "Coach / Treinador",                                         13L,  "81%",
+  "S&C Coach / Especialista em T&C",                           3L,  "19%"
+)
+
+table3 %>%
+  mutate(
+    n   = ifelse(is.na(n),   "", as.character(n)),
+    pct = ifelse(is.na(pct), "", pct)
+  ) %>%
+  kable(
+    col.names = c("Characteristic / Característica", "n", "%"),
+    booktabs  = TRUE,
+    align     = c("l","c","c")
+  ) %>%
+  kable_styling(full_width = TRUE, font_size = 11) %>%
+  row_spec(which(is.na(as.integer(table3$n))), bold = TRUE, background = "#f5f5f5") %>%
+  footnote(
+    general       = "N = 16 coaches; CPB = Brazilian Paralympic Committee / Comitê Paralímpico Brasileiro",
+    general_title = ""
+  )
+```
+
+### Load Monitoring Methods / Métodos de Monitoramento de Carga
+
+::: {.columns}
+::: {.column width="50%"}
+The table below details the specific load monitoring methods used by coaches (multiple responses allowed).
+:::
+::: {.column width="50%"}
+A tabela abaixo detalha os métodos específicos de monitoramento de carga utilizados pelos treinadores (respostas múltiplas permitidas).
+:::
+:::
+
+```{r table3b}
+# Load monitoring — checklist (multiple response)
+methods <- tribble(
+  ~Method,                                              ~n,  ~pct,
+  "Rate of Perceived Exertion (RPE) / PSE",            11L, "69%",
+  "Training session time / Duração da sessão",         11L, "69%",
+  "Performance test with ballistic exercises",          8L, "50%",
+  "Speed / Velocidade",                                 7L, "44%",
+  "Distance / Distância",                               5L, "31%",
+  "Heart Rate / Frequência Cardíaca",                   4L, "25%",
+  "Isometric Strength / Força Isométrica",              4L, "25%",
+  "% of competitive performance",                       4L, "25%",
+  "Coordination and motor test",                        3L, "19%",
+  "Others / Outros",                                    3L, "19%",
+  "Plyometric with arms / Pliometria com braços",       2L, "13%",
+  "GPS Device",                                         2L, "13%"
+)
+
+methods %>%
+  kable(
+    col.names = c("Method / Método", "n", "%"),
+    booktabs = TRUE,
+    align = c("l","c","c")
+  ) %>%
+  kable_styling(full_width = TRUE, font_size = 11) %>%
+  footnote(general = "N = 16 coaches; multiple responses allowed / N = 16 treinadores; respostas múltiplas permitidas",
+           general_title = "")
+```
+
+---
+
+## Figure 1 — Knowledge Sources and Physical Components {#sec-fig1}
+
+::: {.columns}
+::: {.column width="50%"}
+Figure 1 presents the athletes' sources of knowledge and their perceived importance of specific physical components for wheelchair racing performance.
+:::
+::: {.column width="50%"}
+A Figura 1 apresenta as fontes de conhecimento dos atletas e a importância percebida de componentes físicos específicos para o desempenho na corrida em cadeira.
+:::
+:::
+
+```{r fig1, fig.width=10, fig.height=7}
+knitr::include_graphics(here::here("outputs", "Figure_1.png"))
+```
+
+---
+
+## Figure 2 — Exercise Preferences by Group {#sec-fig2}
+
+::: {.columns}
+::: {.column width="50%"}
+Figure 2 illustrates the exercise preferences reported by WR athletes and coaches across different training categories, based on a semi-automated classification algorithm.
+:::
+::: {.column width="50%"}
+A Figura 2 ilustra as preferências de exercícios relatadas por atletas e treinadores em diferentes categorias de treinamento, com base em um algoritmo de classificação semi-automatizado.
+:::
+:::
+
+```{r fig2, fig.width=10, fig.height=8}
+knitr::include_graphics(here::here("outputs", "Figure_2.png"))
+```
+
+---
+
+## Key Findings / Principais Achados
+
+::: {.columns}
+::: {.column width="50%"}
+**1. Bench Press as cornerstone**  
+The Bench Press was the most cited strength exercise by both athletes and coaches across multiple training categories.
+
+**2. Role overload**  
+Most coaches simultaneously manage technical training, S&C programming, and equipment maintenance — with only 3 coaches reporting a dedicated S&C specialist.
+
+**3. Technological gap**  
+While coaches aspire to integrate AI, IMU sensors, and power meters, athletes remain primarily concerned with basic accessibility and infrastructure.
+
+**4. RPE as primary monitoring tool**  
+Rating of Perceived Exertion (RPE) was the most used monitoring method (69% of coaches), reflecting pragmatic adaptation to the limitations of conventional physiological monitoring in this population.
+
+**5. Representative sample**  
+The study captured 66.6% of the total elite WR population in Brazil, including 72.4% of male and 53.8% of female elite athletes.
+:::
+::: {.column width="50%"}
+**1. Supino como exercício central**  
+O Supino foi o exercício de força mais citado por atletas e treinadores em múltiplas categorias de treinamento.
+
+**2. Sobrecarga de funções**  
+A maioria dos treinadores gerencia simultaneamente o treinamento técnico, a prescrição de T&C e a manutenção de equipamentos — com apenas 3 treinadores reportando um especialista dedicado em T&C.
+
+**3. Lacuna tecnológica**  
+Enquanto os treinadores aspiram integrar IA, sensores IMU e medidores de potência, os atletas permanecem principalmente preocupados com acessibilidade básica e infraestrutura.
+
+**4. PSE como principal ferramenta de monitoramento**  
+A Percepção Subjetiva de Esforço (PSE) foi o método de monitoramento mais utilizado (69% dos treinadores), refletindo adaptação pragmática às limitações do monitoramento fisiológico convencional nessa população.
+
+**5. Amostra representativa**  
+O estudo capturou 66,6% da população elite total de corrida em cadeira no Brasil, incluindo 72,4% dos atletas masculinos e 53,8% das atletas femininas de elite.
+:::
+:::
+
+---
+
+## Ethical Statement / Declaração Ética
+
+::: {.columns}
+::: {.column width="50%"}
+This study was approved by the Ethics Committee of the Federal University of Santa Catarina (UFSC), approval number **88809725.6.0000.0121**, and conducted in accordance with the Declaration of Helsinki. All participants provided informed digital consent prior to participation.
+:::
+::: {.column width="50%"}
+Este estudo foi aprovado pelo Comitê de Ética da Universidade Federal de Santa Catarina (UFSC), número de aprovação **88809725.6.0000.0121**, e conduzido em conformidade com a Declaração de Helsinque. Todos os participantes forneceram consentimento digital informado antes da participação.
+:::
+:::
+
+---
+
+## Data Availability / Disponibilidade dos Dados
+
+::: {.columns}
+::: {.column width="50%"}
+The fully anonymized dataset and annotated R scripts are openly available:
+
+- **GitHub:** https://github.com/antunesdiego/wheelchair_racing_survey  
+- **OSF:** https://osf.io/INSERIR
+:::
+::: {.column width="50%"}
+O conjunto de dados completamente anonimizado e os scripts R anotados estão disponíveis abertamente:
+
+- **GitHub:** https://github.com/antunesdiego/wheelchair_racing_survey  
+- **OSF:** https://osf.io/INSERIR
+:::
+:::
+
+---
+
+*Report generated with [Quarto](https://quarto.org) · `r format(Sys.Date(), "%B %d, %Y")`*
