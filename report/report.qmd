@@ -74,13 +74,13 @@ df_coaches  <- df %>% filter(Group == "Coach")
 This report presents the main findings of a cross-sectional survey investigating training practices, knowledge sources, and challenges among Brazilian elite wheelchair racing (WR) athletes and coaches. Data were collected during the **2025 Brazilian Paralympic Athletics Championship**.
 
 The fully anonymized dataset and analysis scripts are available at:  
-🔗 [GitHub](https://github.com/antunesdiego/wheelchair_racing_survey) · [OSF](https://osf.io/INSERIR)
+🔗 [GitHub](https://github.com/antunesdiego/wheelchair_racing_survey) · [OSF](https://osf.io/79yqp)
 :::
 ::: {.column width="50%"}
 Este relatório apresenta os principais achados de um levantamento transversal sobre práticas de treinamento, fontes de conhecimento e desafios entre atletas e treinadores brasileiros de elite em corrida em cadeira de rodas. Os dados foram coletados durante o **Campeonato Brasileiro Paralímpico de Atletismo 2025**.
 
 O conjunto de dados anonimizados e os scripts de análise estão disponíveis em:  
-🔗 [GitHub](https://github.com/antunesdiego/wheelchair_racing_survey) · [OSF](https://osf.io/INSERIR)
+🔗 [GitHub](https://github.com/antunesdiego/wheelchair_racing_survey) · [OSF](https://osf.io/79yqp)
 :::
 :::
 
@@ -401,13 +401,13 @@ Este estudo foi aprovado pelo Comitê de Ética da Universidade Federal de Santa
 The fully anonymized dataset and annotated R scripts are openly available:
 
 - **GitHub:** https://github.com/antunesdiego/wheelchair_racing_survey  
-- **OSF:** https://osf.io/INSERIR
+- **OSF:** https://osf.io/79yqp
 :::
 ::: {.column width="50%"}
 O conjunto de dados completamente anonimizado e os scripts R anotados estão disponíveis abertamente:
 
 - **GitHub:** https://github.com/antunesdiego/wheelchair_racing_survey  
-- **OSF:** https://osf.io/INSERIR
+- **OSF:** https://osf.io/79yqp
 :::
 :::
 

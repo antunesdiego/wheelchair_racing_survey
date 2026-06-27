@@ -1,6 +1,6 @@
 # Wheelchair Racing Survey — Training Practices and Perspectives
 
-[![OSF](https://img.shields.io/badge/OSF-Open%20Data-blue)](https://osf.io/INSERIR)
+[![OSF](https://img.shields.io/badge/OSF-Open%20Data-blue)](https://osf.io/79yqp)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Overview
@@ -98,7 +98,7 @@ R version and package dependencies will be added via `renv` in a future update.
 
 The fully anonymized dataset is available both in this repository and on the Open Science Framework (OSF):
 
-> [https://osf.io/INSERIR](https://osf.io/INSERIR)
+> [https://osf.io/79yqp](https://osf.io/79yqp)
 
 The OSF project also contains the complete survey instruments and supplementary materials.
 
@@ -131,4 +131,4 @@ You are free to share and adapt the material with appropriate attribution.
 ## Contact
 
 Diego Antunes — Federal University of Santa Catarina (UFSC) / Univali  
-[GitHub](https://github.com/antunesdiego) · [OSF](https://osf.io/INSERIR)
+[GitHub](https://github.com/antunesdiego) · [OSF](https://osf.io/79yqp)
