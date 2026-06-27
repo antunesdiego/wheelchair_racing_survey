@@ -1,0 +1,53 @@
+# Force-include anonymized data files (safe for public release)
+!data/clean_analysis_data.csv
+!data/exercises/*.csv
+
+# ============================================================
+# wheelchair_racing_survey — .gitignore
+# ============================================================
+ 
+# --- Raw and intermediate data (privacy protection) ---------
+data/raw/
+Paper\ 1/df_analysis/01_raw_data/
+Paper\ 1/df_analysis/02_scripts/01_merger_rename.R
+Paper\ 1/df_analysis/02_scripts/02_merger_data.R
+Paper\ 1/df_analysis/02_scripts/03_process_data.R
+Paper\ 1/df_analysis/03_clean_data/clean_adults.csv
+Paper\ 1/df_analysis/03_clean_data/clean_trainers.csv
+Paper\ 1/df_analysis/03_clean_data/clean_young.csv
+Paper\ 1/df_analysis/03_clean_data/master_dataset.csv
+ 
+# --- Binary R files -----------------------------------------
+*.rds
+*.RData
+ 
+# --- R session files ----------------------------------------
+.Rhistory
+.RData
+.Rproj.user/
+**/.Rhistory
+ 
+# --- Manuscript and submission folders ----------------------
+Paper\ 1/manuscript/
+manuscript/
+ 
+# --- Tables (refined manually, published in text) -----------
+Paper\ 1/df_analysis/05_tables/
+outputs/tables/
+ 
+# --- OS and editor junk -------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+~$*
+ 
+# --- Temporary and log files --------------------------------
+*.log
+*.tmp
+*.bak
+ 
+# --- renv (add when implemented) ----------------------------
+# renv/library/
+# renv/staging/

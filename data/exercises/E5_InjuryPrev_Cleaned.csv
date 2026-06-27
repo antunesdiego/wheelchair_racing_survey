@@ -1,0 +1,83 @@
+Group,ID_Col,Raw_Text,Term_Clean,Exercise_Category
+Athlete,NA,Todo tipo de mobilidade relacionado a ombro,todo tipo de mobilidade relacionado a ombro,Rotator Cuff Strengthening
+Athlete,NA, manguito,manguito,Rotator Cuff Strengthening
+Athlete,NA,punho,punho,Wrist Curls/Extensions
+Athlete,NA,Alongamentos ,alongamentos,Stretching Exercises
+Athlete,NA,Mobilidade,mobilidade,Joint Mobility Exercises
+Athlete,NA, flexibilidade,flexibilidade,Stretching Exercises
+Athlete,NA,Exercícios de mobilidade com bastão,exercicios de mobilidade com bastao,Joint Mobility Exercises
+Athlete,NA,Mobilidade,mobilidade,Joint Mobility Exercises
+Athlete,NA,Dormir,dormir,Rest & Recovery
+Athlete,NA,piscina gelada,piscina gelada,Cryotherapy
+Athlete,NA,gelo,gelo,Cryotherapy
+Athlete,NA, remada,remada,Seated Row
+Athlete,NA,Aquecimento no rolo,aquecimento no rolo,Warm up
+Athlete,NA, borracha,borracha,Resistance band
+Athlete,NA,elástico,elastico,Resistance band
+Athlete,NA, mobilidade com elásticos,mobilidade com elasticos,Joint Mobility Exercises
+Athlete,NA,gelo,gelo,Cryotherapy
+Athlete,NA,Fortalecimento de punho,fortalecimento de punho,Wrist Curls/Extensions
+Athlete,NA,antebraço,antebraco,Wrist Curls/Extensions
+Athlete,NA,tronco,tronco,Core Strength
+Athlete,NA, triceps,triceps,Triceps Extensions
+Athlete,NA,biceps,biceps,Biceps Curls
+Athlete,NA,Educativos,educativos,Propulsion Technique Drills
+Athlete,NA, treinos regenerativo,treinos regenerativo,Rest & Recovery
+Athlete,NA,Manguito,manguito,Rotator Cuff Strengthening
+Athlete,NA, aquecimento de ombro,aquecimento de ombro,Rotator Cuff Strengthening
+Athlete,NA,elástico,elastico,Resistance band
+Athlete,NA, mobilidade,mobilidade,Joint Mobility Exercises
+Athlete,NA,flexibilidade,flexibilidade,Stretching Exercises
+Athlete,NA,Roteadores externo,roteadores externo,Rotator Cuff Strengthening
+Athlete,NA,Mobilidade ,mobilidade,Joint Mobility Exercises
+Athlete,NA,fortalecimento  de punho,fortalecimento  de punho,Wrist Curls/Extensions
+Athlete,NA,rotadores de manguito,rotadores de manguito,Rotator Cuff Strengthening
+Athlete,NA,Aquecimento antes de qualquer corrida,aquecimento antes de qualquer corrida,Warm up
+Athlete,NA,Mobilidade preensão manual,mobilidade preensao manual,Hand Grip
+Athlete,NA,força rotação de ombro,forca rotacao de ombro,Rotator Cuff Strengthening
+Athlete,NA, educativo,educativo,Propulsion Technique Drills
+Athlete,NA,Mobilidade ,mobilidade,Joint Mobility Exercises
+Athlete,NA,Aquecimento ,aquecimento,Warm up
+Athlete,NA,Educativos,educativos,Propulsion Technique Drills
+Athlete,NA,Exercícios de ombro,exercicios de ombro,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,Força de preensão manual,forca de preensao manual,Hand Grip
+Trainer,ACEITO participar da pesquisa, rotadores de ombro,rotadores de ombro,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,estabilidade de tronco,estabilidade de tronco,Core Strength
+Trainer,ACEITO participar da pesquisa,Core,core,Core Strength
+Trainer,ACEITO participar da pesquisa, mobilidade,mobilidade,Joint Mobility Exercises
+Trainer,ACEITO participar da pesquisa,fortalecimento de antebraço,fortalecimento de antebraco,Wrist Curls/Extensions
+Trainer,ACEITO participar da pesquisa,músculos extrinsecos da mão,musculos extrinsecos da mao,Wrist Curls/Extensions
+Trainer,ACEITO participar da pesquisa,Prancha com rotação do tronco: ,prancha com rotacao do tronco:,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,Remada com puxada alta:  ,remada com puxada alta:,Seated Row
+Trainer,ACEITO participar da pesquisa, Fortalecimento do Manguito Rotador (ex: rotação externa com elástico ou halteres)  2,fortalecimento do manguito rotador (ex: rotacao externa com elastico ou halteres)  2,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa, Remada Invertida ou com Elástico (ênfase nos dorsais,remada invertida ou com elastico (enfase nos dorsais,Resistance band
+Trainer,ACEITO participar da pesquisa,Estabilização de Core (ex: prancha,estabilizacao de core (ex: prancha,Core Strength
+Trainer,ACEITO participar da pesquisa, ponte lateral adaptada,ponte lateral adaptada,Core Strength
+Trainer,ACEITO participar da pesquisa,Exercícios de rotação com barra ou superband,exercicios de rotacao com barra ou superband,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,adução escapulir extensão,aducao escapulir extensao,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa, Desenvolvimento de ombro (waterbag,desenvolvimento de ombro (waterbag,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa, barra com elástico),barra com elastico),Resistance band
+Trainer,ACEITO participar da pesquisa, Rotação de tronco polia ou elástico ,rotacao de tronco polia ou elastico,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,Exercício 1: supino (ou exercícios similares para peito,exercicio 1: supino (ou exercicios similares para peito,Bench Press
+Trainer,ACEITO participar da pesquisa,ombros),ombros),Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,Exercício 2: remada (para fortalecer as costas,exercicio 2: remada (para fortalecer as costas,Seated Row
+Trainer,ACEITO participar da pesquisa,Exrcício 03: prancha (para fortalecer o core,exrcicio 03: prancha (para fortalecer o core,Core Strength
+Trainer,ACEITO participar da pesquisa,a estabilidade do tronco),a estabilidade do tronco),Core Strength
+Trainer,ACEITO participar da pesquisa,Rotação de punho,rotacao de punho,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,adução de ombro,aducao de ombro,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,rotação de braços,rotacao de bracos,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,Desenvolvimento com a Miniband entre os antebraços,desenvolvimento com a miniband entre os antebracos,Resistance band
+Trainer,ACEITO participar da pesquisa,Crucifixo com elástico,crucifixo com elastico,Resistance band
+Trainer,ACEITO participar da pesquisa,Fortalecimento do manguito rotador,fortalecimento do manguito rotador,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa, fortalecimento da região dorsal,fortalecimento da regiao dorsal,Core Strength
+Trainer,ACEITO participar da pesquisa, elevações de ombro com baixa carga,elevacoes de ombro com baixa carga,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,Rotação de punhos,rotacao de punhos,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,Rotação de braços,rotacao de bracos,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,adução de ombro em pegada supina,aducao de ombro em pegada supina,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa, exercícios rotacionais de punho,exercicios rotacionais de punho,Wrist Curls/Extensions
+Trainer,ACEITO participar da pesquisa,Estabilização prancha,estabilizacao prancha,Core Strength
+Trainer,ACEITO participar da pesquisa, ponte,ponte,Core Strength
+Trainer,ACEITO participar da pesquisa, fortalecimento com elástico : manguito,fortalecimento com elastico : manguito,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,demais articulações do ombro,demais articulacoes do ombro,Rotator Cuff Strengthening
+Trainer,ACEITO participar da pesquisa,Exercício de  mobilidade com pequenas cargas,exercicio de  mobilidade com pequenas cargas,Joint Mobility Exercises
+Trainer,ACEITO participar da pesquisa,Rotação de tronco,rotacao de tronco,Rotator Cuff Strengthening

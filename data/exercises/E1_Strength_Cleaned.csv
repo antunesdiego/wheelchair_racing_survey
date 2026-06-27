@@ -1,0 +1,116 @@
+Group,ID_Col,Raw_Text,Term_Clean,Exercise_Category
+Athlete,NA,Remada,remada,Seated Row
+Athlete,NA, supino,supino,Bench Press
+Athlete,NA,paralela,paralela,Dips
+Athlete,NA,Supino,supino,Bench Press
+Athlete,NA,Remada,remada,Seated Row
+Athlete,NA,Desenvolvimento ,desenvolvimento,Shoulder Press
+Athlete,NA,Supino,supino,Bench Press
+Athlete,NA, paralela,paralela,Dips
+Athlete,NA, tríceps máquina,triceps maquina,Triceps Extensions
+Athlete,NA,Supino,supino,Bench Press
+Athlete,NA, desenvolvimento de ombro,desenvolvimento de ombro,Shoulder Press
+Athlete,NA,puxada,puxada,Lat Pull-Down
+Athlete,NA,Rampa,rampa,Uphill Training
+Athlete,NA,musculação pliometria,musculacao pliometria,Plyometrics
+Athlete,NA,Supino,supino,Bench Press
+Athlete,NA, remada,remada,Seated Row
+Athlete,NA, trenó,treno,Resisted Sled Towing
+Athlete,NA,Desenvolvimento de ombro,desenvolvimento de ombro,Shoulder Press
+Athlete,NA, remada,remada,Seated Row
+Athlete,NA,Biceps rosca,biceps rosca,Biceps Curls
+Athlete,NA, antebraço halteres,antebraco halteres,Wrist Curls/Extensions
+Athlete,NA,  desenvolvimento,desenvolvimento,Shoulder Press
+Athlete,NA,Supino reto,supino reto,Bench Press
+Athlete,NA, tríceps,triceps,Triceps Extensions
+Athlete,NA, ombros,ombros,Shoulder Press
+Athlete,NA,antebraço,antebraco,Wrist Curls/Extensions
+Athlete,NA,Supino,supino,Bench Press
+Athlete,NA, triceps,triceps,Triceps Extensions
+Athlete,NA,core,core,Core Strength
+Athlete,NA,rolo com carga pesada,rolo com carga pesada,High-Resistance Roller Training
+Athlete,NA,Arremesso medicine ball,arremesso medicine ball,Ballistic exercise
+Athlete,NA, prancha,prancha,Core Strength
+Athlete,NA, rotação de tronco,rotacao de tronco,Core Strength
+Athlete,NA,biceps,biceps,Biceps Curls
+Athlete,NA, triceps,triceps,Triceps Extensions
+Athlete,NA, ombro,ombro,Shoulder Press
+Athlete,NA, educativos,educativos,Propulsion Technique Drills
+Athlete,NA,rodagem longa 10km 20km,rodagem longa 10km 20km,Continuous Endurance Training
+Athlete,NA,Bíceps,biceps,Biceps Curls
+Athlete,NA, tricpes,tricpes,Triceps Extensions
+Athlete,NA, supino,supino,Bench Press
+Athlete,NA,Explosão  corrida toque decadeira,explosao  corrida toque decadeira,Ballistic exercise
+Athlete,NA,Tríceps,triceps,Triceps Extensions
+Athlete,NA, puxada costas,puxada costas,Lat Pull-Down
+Athlete,NA,supino empurrada,supino empurrada,Bench Press
+Athlete,NA,Supino,supino,Bench Press
+Athlete,NA,barra,barra,Lat Pull-Down
+Athlete,NA,flexão,flexao,Push up
+Athlete,NA,Supino,supino,Bench Press
+Athlete,NA, Remada,remada,Seated Row
+Athlete,NA,barra fixa,barra fixa,Lat Pull-Down
+Athlete,NA,Exercício com elástico,exercicio com elastico,Resistance band
+Athlete,NA,Bola com peso,bola com peso,Ballistic exercise
+Athlete,NA, toque de cadeira alternado,toque de cadeira alternado,Propulsion Technique Drills
+Athlete,NA,Supino largada rampa,supino largada rampa,Bench Press
+Athlete,NA,Flexão,flexao,Push up
+Athlete,NA, exercícios para costa,exercicios para costa,Lat Pull-Down
+Athlete,NA,tríceps,triceps,Triceps Extensions
+Athlete,NA,bíceps elástico,biceps elastico,Biceps Curls
+Athlete,NA, antebraço,antebraco,Wrist Curls/Extensions
+Athlete,NA,tríceps elástico,triceps elastico,Triceps Extensions
+Athlete,NA,Supino simulação de saída,supino simulacao de saida,Bench Press
+Athlete,NA,Triceps,triceps,Triceps Extensions
+Athlete,NA,Rampa,rampa,Uphill Training
+Athlete,NA,Elevação de ombro,elevacao de ombro,Shoulder Press
+Athlete,NA, tricpes,tricpes,Triceps Extensions
+Athlete,NA, bíceps,biceps,Biceps Curls
+Trainer,ACEITO participar da pesquisa,Supino,supino,Bench Press
+Trainer,ACEITO participar da pesquisa, Remada,remada,Seated Row
+Trainer,ACEITO participar da pesquisa,arremesso de Medicina Ball,arremesso de medicina ball,Ballistic exercise
+Trainer,ACEITO participar da pesquisa,Supino,supino,Bench Press
+Trainer,ACEITO participar da pesquisa, Paralela,paralela,Dips
+Trainer,ACEITO participar da pesquisa,Remada,remada,Seated Row
+Trainer,ACEITO participar da pesquisa,Supino horizontal,supino horizontal,Bench Press
+Trainer,ACEITO participar da pesquisa, Rosca scott apoiada,rosca scott apoiada,Biceps Curls
+Trainer,ACEITO participar da pesquisa,Remada alta na polia,remada alta na polia,Seated Row
+Trainer,ACEITO participar da pesquisa,Remada Baixa (com barra,remada baixa (com barra,Seated Row
+Trainer,ACEITO participar da pesquisa, halteres ou elástico) ,halteres ou elastico),Resistance band
+Trainer,ACEITO participar da pesquisa, Flexão de Braço Adaptada (ou no solo,flexao de braco adaptada (ou no solo,Push up
+Trainer,ACEITO participar da pesquisa, Prancha Abdominal (isométrica ou dinâmica),prancha abdominal (isometrica ou dinamica),Core Strength
+Trainer,ACEITO participar da pesquisa,Triceps paralela ou máquina,triceps paralela ou maquina,Dips
+Trainer,ACEITO participar da pesquisa, supino livre e,supino livre e,Bench Press
+Trainer,ACEITO participar da pesquisa, Supino no smith,supino no smith,Bench Press
+Trainer,ACEITO participar da pesquisa, Remada máquina + isometria ,remada maquina + isometria,Seated Row
+Trainer,ACEITO participar da pesquisa, Elevação lateral com halteres + isometria após x repetições,elevacao lateral com halteres + isometria apos x repeticoes,Shoulder Press
+Trainer,ACEITO participar da pesquisa,Exercício 2: Supino ,exercicio 2: supino,Bench Press
+Trainer,ACEITO participar da pesquisa,Exercício 3: Puxada alta ,exercicio 3: puxada alta,Lat Pull-Down
+Trainer,ACEITO participar da pesquisa, Para desenvolver a força nos músculos das costas,para desenvolver a forca nos musculos das costas,Lat Pull-Down
+Trainer,ACEITO participar da pesquisa,Esses exercícios são fundamentais para o desenvolvimento de força,esses exercicios sao fundamentais para o desenvolvimento de forca,Shoulder Press
+Trainer,ACEITO participar da pesquisa,Supino reto,supino reto,Bench Press
+Trainer,ACEITO participar da pesquisa, remada,remada,Seated Row
+Trainer,ACEITO participar da pesquisa,puxada,puxada,Lat Pull-Down
+Trainer,ACEITO participar da pesquisa,Supino com halteres (reto,supino com halteres (reto,Bench Press
+Trainer,ACEITO participar da pesquisa,Tríceps na polia (corda,triceps na polia (corda,Triceps Extensions
+Trainer,ACEITO participar da pesquisa, barra ou unilateral),barra ou unilateral),Lat Pull-Down
+Trainer,ACEITO participar da pesquisa,Desenvolvimento com Halteres,desenvolvimento com halteres,Shoulder Press
+Trainer,ACEITO participar da pesquisa,Tricpes francês,tricpes frances,Triceps Extensions
+Trainer,ACEITO participar da pesquisa, flexão de braço,flexao de braco,Push up
+Trainer,ACEITO participar da pesquisa,Supino,supino,Bench Press
+Trainer,ACEITO participar da pesquisa, pulldown,pulldown,Lat Pull-Down
+Trainer,ACEITO participar da pesquisa, puxada frente,puxada frente,Lat Pull-Down
+Trainer,ACEITO participar da pesquisa,Supino declinado,supino declinado,Bench Press
+Trainer,ACEITO participar da pesquisa,Tríceps pulley,triceps pulley,Triceps Extensions
+Trainer,ACEITO participar da pesquisa,Remada no banco inclinado ,remada no banco inclinado,Seated Row
+Trainer,ACEITO participar da pesquisa,supino,supino,Bench Press
+Trainer,ACEITO participar da pesquisa, rosca,rosca,Biceps Curls
+Trainer,ACEITO participar da pesquisa,Com halter ( pollouver,com halter ( pollouver,Lat Pull-Down
+Trainer,ACEITO participar da pesquisa,  supino,supino,Bench Press
+Trainer,ACEITO participar da pesquisa,desenvolvimento),desenvolvimento),Shoulder Press
+Trainer,ACEITO participar da pesquisa,Supino,supino,Bench Press
+Trainer,ACEITO participar da pesquisa, remada,remada,Seated Row
+Trainer,ACEITO participar da pesquisa,flexão de braços,flexao de bracos,Push up
+Trainer,ACEITO participar da pesquisa, Supino,supino,Bench Press
+Trainer,ACEITO participar da pesquisa, Remada,remada,Seated Row
+Trainer,ACEITO participar da pesquisa, Tríceps Coice,triceps coice,Triceps Extensions

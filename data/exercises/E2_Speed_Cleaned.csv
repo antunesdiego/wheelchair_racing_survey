@@ -1,0 +1,102 @@
+Group,ID_Col,Raw_Text,Term_Clean,Exercise_Category
+Athlete,NA,Paralela,paralela,Dips
+Athlete,NA, triceps sentado,triceps sentado,Triceps Extensions
+Athlete,NA,remada deitada,remada deitada,Seated Row
+Athlete,NA,Sprint com intervalos curtos,sprint com intervalos curtos,Sprint
+Athlete,NA,Rodagem para volume,rodagem para volume,Continuous Endurance Training
+Athlete,NA,Sprint,sprint,Sprint
+Athlete,NA,Supino concêntrico,supino concentrico,Bench Press
+Athlete,NA, supino barra guiada,supino barra guiada,Bench Press
+Athlete,NA, flexão explosiva,flexao explosiva,Ballistic exercise
+Athlete,NA,Supino,supino,Bench Press
+Athlete,NA,Trenor rampa,trenor rampa,Resisted Sled Towing
+Athlete,NA,Supino,supino,Bench Press
+Athlete,NA, trenó,treno,Resisted Sled Towing
+Athlete,NA, remada,remada,Seated Row
+Athlete,NA,Remada,remada,Seated Row
+Athlete,NA, desenvolvimento de ombro,desenvolvimento de ombro,Shoulder Press
+Athlete,NA,Rolo pesado,rolo pesado,High-Resistance Roller Training
+Athlete,NA, subida,subida,Uphill Training
+Athlete,NA, elástico,elastico,Resistance band
+Athlete,NA,Treinos de tiros curtos,treinos de tiros curtos,Sprint
+Athlete,NA,Tiro curto de velocidade máxima no rolo,tiro curto de velocidade maxima no rolo,Sprint
+Athlete,NA,sprint,sprint,Sprint
+Athlete,NA,Abdominal,abdominal,Core Strength
+Athlete,NA, giro russo ,giro russo,Core Strength
+Athlete,NA, rotação de tronco,rotacao de tronco,Core Strength
+Athlete,NA,tronco,tronco,Core Strength
+Athlete,NA, triceps,triceps,Triceps Extensions
+Athlete,NA,biceps,biceps,Biceps Curls
+Athlete,NA, tiros curtos 10m 30m 50m,tiros curtos 10m 30m 50m,Sprint
+Athlete,NA,Motorzinho,motorzinho,Propulsion Technique Drills
+Athlete,NA, tiro Sprint curtos,tiro sprint curtos,Sprint
+Athlete,NA,Musculação  agilidade manuseio,musculacao  agilidade manuseio,Propulsion Technique Drills
+Athlete,NA,Rolo,rolo,High-Resistance Roller Training
+Athlete,NA, declive,declive,Overspeed Training
+Athlete,NA,Sprint,sprint,Sprint
+Athlete,NA, rampa,rampa,Uphill Training
+Athlete,NA,Supino na barra guiada,supino na barra guiada,Bench Press
+Athlete,NA, treino de velocidade  da pista ,treino de velocidade  da pista,Sprint
+Athlete,NA,TIro,tiro,Sprint
+Athlete,NA, toque de cadeira sem tirar a mão do aro,toque de cadeira sem tirar a mao do aro,Propulsion Technique Drills
+Athlete,NA, toque de cadeira alternado,toque de cadeira alternado,Propulsion Technique Drills
+Athlete,NA,Elástico rolo pista,elastico rolo pista,High-Resistance Roller Training
+Athlete,NA,Rampa,rampa,Uphill Training
+Athlete,NA, barra guiada,barra guiada,Lat Pull-Down
+Athlete,NA,flexão com salto,flexao com salto,Ballistic exercise
+Athlete,NA,sprint,sprint,Sprint
+Athlete,NA, trenó,treno,Resisted Sled Towing
+Athlete,NA, progressivo,progressivo,Propulsion Technique Drills
+Athlete,NA,Supino,supino,Bench Press
+Athlete,NA,Triceps,triceps,Triceps Extensions
+Athlete,NA,Rampa,rampa,Uphill Training
+Athlete,NA,Elevação,elevacao,Shoulder Press
+Athlete,NA, educativo,educativo,Propulsion Technique Drills
+Athlete,NA, manivela,manivela,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa,Sprint de 30 metros,sprint de 30 metros,Sprint
+Trainer,ACEITO participar da pesquisa, arremesso de medicina ball ,arremesso de medicina ball,Ballistic exercise
+Trainer,ACEITO participar da pesquisa,pliometria de braço,pliometria de braco,Plyometrics
+Trainer,ACEITO participar da pesquisa,Supino com velocidade,supino com velocidade,Sprint
+Trainer,ACEITO participar da pesquisa, lançamento de barra guiada,lancamento de barra guiada,Ballistic exercise
+Trainer,ACEITO participar da pesquisa,remada deitada com velocidade,remada deitada com velocidade,Sprint
+Trainer,ACEITO participar da pesquisa,Flexões explosivas,flexoes explosivas,Ballistic exercise
+Trainer,ACEITO participar da pesquisa, Arremessos de medicine ball,arremessos de medicine ball,Ballistic exercise
+Trainer,ACEITO participar da pesquisa,Barras fixas com movimento pliométrico,barras fixas com movimento pliometrico,Plyometrics
+Trainer,ACEITO participar da pesquisa,1º Propulsão Explosiva com Cadeira no Rolo ou Ergométrico ,1º propulsao explosiva com cadeira no rolo ou ergometrico,Ballistic exercise
+Trainer,ACEITO participar da pesquisa, 2ºMedicine Ball Throw (Arremesso de Bola Medicinal) – frontal ou lateral,2ºmedicine ball throw (arremesso de bola medicinal) - frontal ou lateral,Ballistic exercise
+Trainer,ACEITO participar da pesquisa,3º Supino com Movimento Balístico ou com Banda Elástica,3º supino com movimento balistico ou com banda elastica,Bench Press
+Trainer,ACEITO participar da pesquisa,Supino livre,supino livre,Bench Press
+Trainer,ACEITO participar da pesquisa, pliometria com os membros superiores ,pliometria com os membros superiores,Plyometrics
+Trainer,ACEITO participar da pesquisa,educativos,educativos,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa, Supino no smith (arremessando a barra,supino no smith (arremessando a barra,Bench Press
+Trainer,ACEITO participar da pesquisa, Pullover explosivo (amplo,pullover explosivo (amplo,Ballistic exercise
+Trainer,ACEITO participar da pesquisa, Lançamentos com medball (frontal,lancamentos com medball (frontal,Ballistic exercise
+Trainer,ACEITO participar da pesquisa,Exercício 1: Sprints: Exercício de corrida curta,exercicio 1: sprints: exercicio de corrida curta,Sprint
+Trainer,ACEITO participar da pesquisa,Exercício 2: Plyometria (Saltos): Exercícios que envolvem saltos,exercicio 2: plyometria (saltos): exercicios que envolvem saltos,Ballistic exercise
+Trainer,ACEITO participar da pesquisa,movimentos explosivos,movimentos explosivos,Ballistic exercise
+Trainer,ACEITO participar da pesquisa,Exercício 3: Lançamento de peso ou medicine ball ,exercicio 3: lancamento de peso ou medicine ball,Ballistic exercise
+Trainer,ACEITO participar da pesquisa, ajuda a desenvolver potência nos músculos do tronco,ajuda a desenvolver potencia nos musculos do tronco,Core Strength
+Trainer,ACEITO participar da pesquisa,Supino reto,supino reto,Bench Press
+Trainer,ACEITO participar da pesquisa, remada,remada,Seated Row
+Trainer,ACEITO participar da pesquisa,puxada,puxada,Lat Pull-Down
+Trainer,ACEITO participar da pesquisa,Lançamento de Medball ou Slamball,lancamento de medball ou slamball,Ballistic exercise
+Trainer,ACEITO participar da pesquisa,Toque de Cadeira em Rolo Estacionário,toque de cadeira em rolo estacionario,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa,Flexão de Braços,flexao de bracos,Push up
+Trainer,ACEITO participar da pesquisa,Flexão de  braço com palma,flexao de  braco com palma,Push up
+Trainer,ACEITO participar da pesquisa, lançar med na parede,lancar med na parede,Ballistic exercise
+Trainer,ACEITO participar da pesquisa,Arremesso Medicinebol,arremesso medicinebol,Ballistic exercise
+Trainer,ACEITO participar da pesquisa, push press,push press,Bench Press
+Trainer,ACEITO participar da pesquisa, supino facilitado,supino facilitado,Bench Press
+Trainer,ACEITO participar da pesquisa,Supino declinado,supino declinado,Bench Press
+Trainer,ACEITO participar da pesquisa,Tríceps pulley,triceps pulley,Triceps Extensions
+Trainer,ACEITO participar da pesquisa,Remada no banco deitado,remada no banco deitado,Seated Row
+Trainer,ACEITO participar da pesquisa,Arremesso de barra de supino,arremesso de barra de supino,Ballistic exercise
+Trainer,ACEITO participar da pesquisa, pneus,pneus,Resisted Sled Towing
+Trainer,ACEITO participar da pesquisa,paraquedas P,paraquedas p,Resisted Sled Towing
+Trainer,ACEITO participar da pesquisa,pliometria com membro superior(puxe,pliometria com membro superior(puxe,Plyometrics
+Trainer,ACEITO participar da pesquisa,Lançamento de medicine Ball (deitado,lancamento de medicine ball (deitado,Ballistic exercise
+Trainer,ACEITO participar da pesquisa,Exercícios com elásticos ,exercicios com elasticos,Resistance band
+Trainer,ACEITO participar da pesquisa, exercícios de sprint,exercicios de sprint,Sprint
+Trainer,ACEITO participar da pesquisa,Tríceps barra paralela ,triceps barra paralela,Dips
+Trainer,ACEITO participar da pesquisa,Remada Unilateral ,remada unilateral,Seated Row
+Trainer,ACEITO participar da pesquisa,Flexão,flexao,Push up

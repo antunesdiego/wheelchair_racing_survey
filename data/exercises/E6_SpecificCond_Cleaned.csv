@@ -1,0 +1,83 @@
+Group,ID_Col,Raw_Text,Term_Clean,Exercise_Category
+Athlete,NA,Remada,remada,Seated Row
+Athlete,NA, puxador,puxador,Lat Pull-Down
+Athlete,NA, triceps,triceps,Triceps Extensions
+Athlete,NA,Velocidade,velocidade,Sprint
+Athlete,NA, estar bem de força,estar bem de forca,Strength Training
+Athlete,NA,Fartlek,fartlek,Fartlek
+Athlete,NA,Treinos de tiro,treinos de tiro,Track Training
+Athlete,NA,Motorzinho,motorzinho,Propulsion Technique Drills
+Athlete,NA, elástico,elastico,Resistance band
+Athlete,NA, pliometria,pliometria,Plyometrics
+Athlete,NA, remada,remada,Seated Row
+Athlete,NA,halter,halter,Strength Training
+Athlete,NA,Academia,academia,Strength Training
+Athlete,NA, rua,rua,Continuous Endurance Training
+Athlete,NA, rolo,rolo,High-Resistance Roller Training
+Athlete,NA,Tempo em cadeira de rodas ( longas distâncias tocando),tempo em cadeira de rodas ( longas distancias tocando),Continuous Endurance Training
+Athlete,NA,Tiro com trenó ou caneleira,tiro com treno ou caneleira,Track Training
+Athlete,NA,treino de pista,treino de pista,Track Training
+Athlete,NA,Rotação de tronco (giro russo),rotacao de tronco (giro russo),Core Strength
+Athlete,NA, tempo de reação,tempo de reacao,Reaction Time Drills
+Athlete,NA,tronco,tronco,Core Strength
+Athlete,NA, triceps,triceps,Triceps Extensions
+Athlete,NA,ombro,ombro,Shoulder Press
+Athlete,NA,Rodagem longa,rodagem longa,Continuous Endurance Training
+Athlete,NA,muitos tiros cima de 400m,muitos tiros cima de 400m,Track Training
+Athlete,NA,Treino específico na pista,treino especifico na pista,Track Training
+Athlete,NA,Treino intervalado no geral Sprint,treino intervalado no geral sprint,Track Training
+Athlete,NA,volume,volume,Continuous Endurance Training
+Athlete,NA,Rodagem,rodagem,Continuous Endurance Training
+Athlete,NA,Remada,remada,Seated Row
+Athlete,NA, mobilidade  de punho,mobilidade  de punho,Joint Mobility Exercises
+Athlete,NA, supino,supino,Bench Press
+Athlete,NA,Fazer tiros de 100m,fazer tiros de 100m,Track Training
+Athlete,NA,trabalhar muito a finalização,trabalhar muito a finalizacao,Propulsion Technique Drills
+Athlete,NA,Saída rodagem educativo,saida rodagem educativo,Continuous Endurance Training
+Athlete,NA,Tiro de provas curtas,tiro de provas curtas,Track Training
+Athlete,NA,coordenativos,coordenativos,Propulsion Technique Drills
+Athlete,NA,rolo,rolo,High-Resistance Roller Training
+Athlete,NA, progressivos,progressivos,Track Training
+Athlete,NA,Treinamento na pista,treinamento na pista,Track Training
+Athlete,NA,Aquecimento,aquecimento,Warm up
+Athlete,NA,Educativos,educativos,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa,Treinamento no rolo com carga,treinamento no rolo com carga,High-Resistance Roller Training
+Trainer,ACEITO participar da pesquisa, estabilidade de tronco,estabilidade de tronco,Core Strength
+Trainer,ACEITO participar da pesquisa,preensão manual,preensao manual,Hand Grip
+Trainer,ACEITO participar da pesquisa,Fart Leck,fart leck,Fartlek
+Trainer,ACEITO participar da pesquisa, super velocidade,super velocidade,Sprint
+Trainer,ACEITO participar da pesquisa,resistem de velocidade,resistem de velocidade,Sprint
+Trainer,ACEITO participar da pesquisa, Remo com puxada alta,remo com puxada alta,Seated Row
+Trainer,ACEITO participar da pesquisa,Prancha,prancha,Core Strength
+Trainer,ACEITO participar da pesquisa, Treino Intervalado na Cadeira (em pista,treino intervalado na cadeira (em pista,Track Training
+Trainer,ACEITO participar da pesquisa, rolo ou ergômetro adaptado)  2,rolo ou ergometro adaptado)  2,High-Resistance Roller Training
+Trainer,ACEITO participar da pesquisa, Circuito Funcional com Braços (empurrar,circuito funcional com bracos (empurrar,Strength Training
+Trainer,ACEITO participar da pesquisa, Subidas ou Sprints com Cadeira (curta distância,subidas ou sprints com cadeira (curta distancia,Sprint
+Trainer,ACEITO participar da pesquisa,Intervalados em,intervalados em,Track Training
+Trainer,ACEITO participar da pesquisa,pistas,pistas,Track Training
+Trainer,ACEITO participar da pesquisa, tiros lançados,tiros lancados,Track Training
+Trainer,ACEITO participar da pesquisa,treinos de saídas,treinos de saidas,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa, Rolo de rodagem ,rolo de rodagem,Continuous Endurance Training
+Trainer,ACEITO participar da pesquisa, Remo (estilo crossfit),remo (estilo crossfit),Seated Row
+Trainer,ACEITO participar da pesquisa, Corda naval,corda naval,Strength Training
+Trainer,ACEITO participar da pesquisa,Exercíco 1: Flexão de Braço,exercico 1: flexao de braco,Push up
+Trainer,ACEITO participar da pesquisa,Exercíco 2: Prancha com Rotação,exercico 2: prancha com rotacao,Core Strength
+Trainer,ACEITO participar da pesquisa,Ciclo ergômetro,ciclo ergometro,High-Resistance Roller Training
+Trainer,ACEITO participar da pesquisa, educativos,educativos,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa,rodagem com longa distância,rodagem com longa distancia,Continuous Endurance Training
+Trainer,ACEITO participar da pesquisa,Exercícios intervalados de alta intensidade (HIIT,exercicios intervalados de alta intensidade (hiit,Track Training
+Trainer,ACEITO participar da pesquisa,) de toque de cadeira no rolo  estacionário,) de toque de cadeira no rolo  estacionario,High-Resistance Roller Training
+Trainer,ACEITO participar da pesquisa,Rampa,rampa,Uphill Training
+Trainer,ACEITO participar da pesquisa, trenó,treno,Resisted Sled Towing
+Trainer,ACEITO participar da pesquisa,Encaixe do toque,encaixe do toque,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa, máximo de potência em 10 toques,maximo de potencia em 10 toques,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa,Tríceps Pulley,triceps pulley,Triceps Extensions
+Trainer,ACEITO participar da pesquisa,exercícios educativos com progressão de  carga,exercicios educativos com progressao de  carga,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa,musculação,musculacao,Strength Training
+Trainer,ACEITO participar da pesquisa,Toque na cadeira,toque na cadeira,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa, manivela,manivela,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa, acelera,acelera,Sprint
+Trainer,ACEITO participar da pesquisa, progressivo,progressivo,Track Training
+Trainer,ACEITO participar da pesquisa,Supino,supino,Bench Press
+Trainer,ACEITO participar da pesquisa,Remada,remada,Seated Row
+Trainer,ACEITO participar da pesquisa,Tríceps coice,triceps coice,Triceps Extensions

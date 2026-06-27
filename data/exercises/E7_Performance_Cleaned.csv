@@ -1,0 +1,78 @@
+Group,ID_Col,Raw_Text,Term_Clean,Exercise_Category
+Athlete,NA,Mobilidades,mobilidades,Joint Mobility Exercises
+Athlete,NA, abdominal,abdominal,Core Strength
+Athlete,NA, triceps,triceps,Triceps Extensions
+Athlete,NA,Treino educativos,treino educativos,Propulsion Technique Drills
+Athlete,NA,mentalidade boa,mentalidade boa,Mental Toughness
+Athlete,NA,Treinos de tiro,treinos de tiro,Track Training
+Athlete,NA,Pelotão,pelotao,Track Training
+Athlete,NA,Motorzinho,motorzinho,Propulsion Technique Drills
+Athlete,NA, trenó,treno,Resisted Sled Towing
+Athlete,NA, cincotoque,cincotoque,Propulsion Technique Drills
+Athlete,NA,Remada,remada,Seated Row
+Athlete,NA, desenvolvimento de ombro,desenvolvimento de ombro,Shoulder Press
+Athlete,NA,halter,halter,Strength Training
+Athlete,NA,Velocidade no rolo,velocidade no rolo,Track Training
+Athlete,NA,Estímulos de reação de largada,estimulos de reacao de largada,Reaction Time Drills
+Athlete,NA,rolo,rolo,High-Resistance Roller Training
+Athlete,NA,Extensão lombar (paraquedas),extensao lombar (paraquedas),Core Strength
+Athlete,NA,tronco,tronco,Core Strength
+Athlete,NA, triceps,triceps,Triceps Extensions
+Athlete,NA,ombro,ombro,Shoulder Press
+Athlete,NA,Educativos,educativos,Propulsion Technique Drills
+Athlete,NA,Largada,largada,Sprint
+Athlete,NA, sprints curtos,sprints curtos,Sprint
+Athlete,NA,rolo,rolo,High-Resistance Roller Training
+Athlete,NA,Bom encaixe proteção equipamento,bom encaixe protecao equipamento,Wheelchair Racing Equipment
+Athlete,NA,Explosão,explosao,Ballistic exercise
+Athlete,NA, exercícios rápidos,exercicios rapidos,Ballistic exercise
+Athlete,NA,Aceleração de 50m,aceleracao de 50m,Sprint
+Athlete,NA, manutenção de velocidade,manutencao de velocidade,Track Training
+Athlete,NA,fartlek,fartlek,Fartlek
+Athlete,NA,Treinos de sprint,treinos de sprint,Sprint
+Athlete,NA, fartlek ,fartlek,Fartlek
+Athlete,NA,supino,supino,Bench Press
+Athlete,NA,Velocidade vontade,velocidade vontade,Track Training
+Athlete,NA,Peitoral,peitoral,Bench Press
+Athlete,NA,costas,costas,Lat Pull-Down
+Athlete,NA,bíceps,biceps,Biceps Curls
+Athlete,NA, tríceps,triceps,Triceps Extensions
+Athlete,NA, ombro,ombro,Shoulder Press
+Athlete,NA,Rampa,rampa,Uphill Training
+Athlete,NA,Treino na pista,treino na pista,Track Training
+Trainer,ACEITO participar da pesquisa,Supino,supino,Bench Press
+Trainer,ACEITO participar da pesquisa, Remada,remada,Seated Row
+Trainer,ACEITO participar da pesquisa,Rotadores de ombro,rotadores de ombro,Shoulder Press
+Trainer,ACEITO participar da pesquisa,Aceleração,aceleracao,Sprint
+Trainer,ACEITO participar da pesquisa, supra velocidade FARTLECK,supra velocidade fartleck,Overspeed Training
+Trainer,ACEITO participar da pesquisa,Supino,supino,Bench Press
+Trainer,ACEITO participar da pesquisa, Remada,remada,Seated Row
+Trainer,ACEITO participar da pesquisa, Treino de Propulsão Técnica com Intensidade Variável (em pista,treino de propulsao tecnica com intensidade variavel (em pista,Track Training
+Trainer,ACEITO participar da pesquisa, rolo ou ergômetro adaptado) 2,rolo ou ergometro adaptado) 2,High-Resistance Roller Training
+Trainer,ACEITO participar da pesquisa, Supino com Explosividade (tradicional,supino com explosividade (tradicional,Bench Press
+Trainer,ACEITO participar da pesquisa, Remada Sentado com Carga (halteres,remada sentado com carga (halteres,Seated Row
+Trainer,ACEITO participar da pesquisa,Rodagem em pista,rodagem em pista,Track Training
+Trainer,ACEITO participar da pesquisa,arremeco de medicene ball,arremeco de medicene ball,Ballistic exercise
+Trainer,ACEITO participar da pesquisa, crucifixo inverso + Isometria de romboides ,crucifixo inverso + isometria de romboides,Isometric Strength
+Trainer,ACEITO participar da pesquisa, isometria complexo de ombro (elevação lateral,isometria complexo de ombro (elevacao lateral,Shoulder Press
+Trainer,ACEITO participar da pesquisa,Exercício 2: Flexão de braço: A flexão é um exercício de corpo inteiro que fortalece o peito,exercicio 2: flexao de braco: a flexao e um exercicio de corpo inteiro que fortalece o peito,Push up
+Trainer,ACEITO participar da pesquisa, ombros,ombros,Shoulder Press
+Trainer,ACEITO participar da pesquisa, tríceps,triceps,Triceps Extensions
+Trainer,ACEITO participar da pesquisa, flexão,flexao,Push up
+Trainer,ACEITO participar da pesquisa,Técnica: entrada na luva na cadeira,tecnica: entrada na luva na cadeira,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa, postura correta na cadeira,postura correta na cadeira,Core Strength
+Trainer,ACEITO participar da pesquisa,saída da luva da cadeira,saida da luva da cadeira,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa,Tiros de  30 a 60 metros,tiros de  30 a 60 metros,Track Training
+Trainer,ACEITO participar da pesquisa,Hiper velocidade,hiper velocidade,Overspeed Training
+Trainer,ACEITO participar da pesquisa, desenvolvimento unilateral,desenvolvimento unilateral,Shoulder Press
+Trainer,ACEITO participar da pesquisa, supino,supino,Bench Press
+Trainer,ACEITO participar da pesquisa,Supino Declinado,supino declinado,Bench Press
+Trainer,ACEITO participar da pesquisa,exercícios de sprints com carga em distâncias variadas,exercicios de sprints com carga em distancias variadas,Sprint
+Trainer,ACEITO participar da pesquisa, musculação,musculacao,Strength Training
+Trainer,ACEITO participar da pesquisa, simulado em pista,simulado em pista,Track Training
+Trainer,ACEITO participar da pesquisa,Rodagem,rodagem,Continuous Endurance Training
+Trainer,ACEITO participar da pesquisa, tiros curto,tiros curto,Track Training
+Trainer,ACEITO participar da pesquisa,Exercícios dinâmicos ( tiros curtos)com elástico,exercicios dinamicos ( tiros curtos)com elastico,Track Training
+Trainer,ACEITO participar da pesquisa,Tríceps barra paralela ,triceps barra paralela,Triceps Extensions
+Trainer,ACEITO participar da pesquisa,Remada Unilateral ,remada unilateral,Seated Row
+Trainer,ACEITO participar da pesquisa,Flexão,flexao,Push up

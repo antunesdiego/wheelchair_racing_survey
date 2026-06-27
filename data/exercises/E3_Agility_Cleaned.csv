@@ -1,0 +1,83 @@
+Group,ID_Col,Raw_Text,Term_Clean,Exercise_Category
+Athlete,NA,Barra fixa,barra fixa,Lat Pull-Down
+Athlete,NA, paralela,paralela,Dips
+Athlete,NA,supino articulado,supino articulado,Bench Press
+Athlete,NA,Tempo de reação,tempo de reacao,Reaction Time Drills
+Athlete,NA, saída,saida,Propulsion Technique Drills
+Athlete,NA, rampa,rampa,Uphill Training
+Athlete,NA,Exercícios de potência,exercicios de potencia,Ballistic exercise
+Athlete,NA,manivela,manivela,Propulsion Technique Drills
+Athlete,NA, toque reverso,toque reverso,Propulsion Technique Drills
+Athlete,NA,aeroporto duplo,aeroporto duplo,Chair Handling Skills
+Athlete,NA,Remada,remada,Seated Row
+Athlete,NA, desenvolvimento de ombro,desenvolvimento de ombro,Shoulder Press
+Athlete,NA,Rolo,rolo,High-Resistance Roller Training
+Athlete,NA, educativos,educativos,Propulsion Technique Drills
+Athlete,NA,Alongamentos,alongamentos,Stretching Exercises
+Athlete,NA,treinos de técnicas na cadeira,treinos de tecnicas na cadeira,Propulsion Technique Drills
+Athlete,NA,Tiro em rampa,tiro em rampa,Sprint
+Athlete,NA, subindo,subindo,Uphill Training
+Athlete,NA,descendo em 100%,descendo em 100%,Overspeed Training
+Athlete,NA,Reação,reacao,Reaction Time Drills
+Athlete,NA,  elástico com movimentos da corrida,elastico com movimentos da corrida,Resistance band
+Athlete,NA,tronco,tronco,Core Strength
+Athlete,NA, triceps,triceps,Triceps Extensions
+Athlete,NA,biceps,biceps,Biceps Curls
+Athlete,NA,Tiros curtos,tiros curtos,Sprint
+Athlete,NA,educativos,educativos,Propulsion Technique Drills
+Athlete,NA,Motorzinho,motorzinho,Propulsion Technique Drills
+Athlete,NA,sprint,sprint,Sprint
+Athlete,NA, rolo mais leve,rolo mais leve,High-Resistance Roller Training
+Athlete,NA,Foco resposta rápida atenção,foco resposta rapida atencao,Reaction Time Drills
+Athlete,NA,Tempo de reação,tempo de reacao,Reaction Time Drills
+Athlete,NA,Teste de reação,teste de reacao,Reaction Time Drills
+Athlete,NA, mobilidade,mobilidade,Joint Mobility Exercises
+Athlete,NA,Educativos,educativos,Propulsion Technique Drills
+Athlete,NA,trabalho  de reação,trabalho  de reacao,Reaction Time Drills
+Athlete,NA,Toque de cadeira alternado,toque de cadeira alternado,Propulsion Technique Drills
+Athlete,NA, toque de cadeira sem tirar a mão do aro,toque de cadeira sem tirar a mao do aro,Propulsion Technique Drills
+Athlete,NA,Tempo de reação,tempo de reacao,Reaction Time Drills
+Athlete,NA,educativo,educativo,Propulsion Technique Drills
+Athlete,NA, tempo de reação com a mão,tempo de reacao com a mao,Reaction Time Drills
+Athlete,NA,Lançamento da barra de supino guiado,lancamento da barra de supino guiado,Bench Press
+Athlete,NA,Remada,remada,Seated Row
+Athlete,NA,Triceps,triceps,Triceps Extensions
+Trainer,ACEITO participar da pesquisa,Exercícios de toques educativos,exercicios de toques educativos,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa,empinar a cadeira,empinar a cadeira,Chair Handling Skills
+Trainer,ACEITO participar da pesquisa,Exercícios de tempo de reação variados,exercicios de tempo de reacao variados,Reaction Time Drills
+Trainer,ACEITO participar da pesquisa, mudança de ritmo em pouco espaço de tempo,mudanca de ritmo em pouco espaco de tempo,Fartlek
+Trainer,ACEITO participar da pesquisa,Flexões de braço explosivas,flexoes de braco explosivas,Ballistic exercise
+Trainer,ACEITO participar da pesquisa, Flexões com batida de palmas,flexoes com batida de palmas,Ballistic exercise
+Trainer,ACEITO participar da pesquisa,Arremessos com medicine ball,arremessos com medicine ball,Ballistic exercise
+Trainer,ACEITO participar da pesquisa, Slalom com Cadeira (Zigue,slalom com cadeira (zigue,Chair Handling Skills
+Trainer,ACEITO participar da pesquisa,zague entre cones) ,zague entre cones),Chair Handling Skills
+Trainer,ACEITO participar da pesquisa, Propulsões Curtas com Mudança de Direção (Drills de aceleração,propulsoes curtas com mudanca de direcao (drills de aceleracao,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa, Exercícios de Core Dinâmico (ex: prancha com rotação,exercicios de core dinamico (ex: prancha com rotacao,Core Strength
+Trainer,ACEITO participar da pesquisa, medicine ball twist),medicine ball twist),Ballistic exercise
+Trainer,ACEITO participar da pesquisa,Educativos no rolo,educativos no rolo,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa,rodagem com pegada contínua no aro de propurção (exercício de  manivela),rodagem com pegada continua no aro de propurcao (exercicio de  manivela),Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa, Sprints intervalados,sprints intervalados,Sprint
+Trainer,ACEITO participar da pesquisa, Flexão de braço pliometrica ,flexao de braco pliometrica,Plyometrics
+Trainer,ACEITO participar da pesquisa,Exercício1: Cones ou marcadores: Exercício que envolve correr em torno de cones ou marcadores dispostos em um padrão específico,exercicio1: cones ou marcadores: exercicio que envolve correr em torno de cones ou marcadores dispostos em um padrao especifico,Chair Handling Skills
+Trainer,ACEITO participar da pesquisa,Exercício 2: Shuttle runs: Exercício que envolve correr de um ponto a outro,exercicio 2: shuttle runs: exercicio que envolve correr de um ponto a outro,Chair Handling Skills
+Trainer,ACEITO participar da pesquisa,Exercício 3: Ladder drills: Exercício que envolve realizar movimentos rápidos,exercicio 3: ladder drills: exercicio que envolve realizar movimentos rapidos,Chair Handling Skills
+Trainer,ACEITO participar da pesquisa,Zigue,zigue,Chair Handling Skills
+Trainer,ACEITO participar da pesquisa,zague,zague,Chair Handling Skills
+Trainer,ACEITO participar da pesquisa, suicídio entre os cones,suicidio entre os cones,Chair Handling Skills
+Trainer,ACEITO participar da pesquisa,pegue a varetas,pegue a varetas,Chair Handling Skills
+Trainer,ACEITO participar da pesquisa,empinar),empinar),Chair Handling Skills
+Trainer,ACEITO participar da pesquisa,Reação ao comando,reacao ao comando,Reaction Time Drills
+Trainer,ACEITO participar da pesquisa, reação as cores,reacao as cores,Reaction Time Drills
+Trainer,ACEITO participar da pesquisa, corrida slalom,corrida slalom,Chair Handling Skills
+Trainer,ACEITO participar da pesquisa,"""Toque"" com anilha","""toque"" com anilha",Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa,Arremesso de medicineball,arremesso de medicineball,Ballistic exercise
+Trainer,ACEITO participar da pesquisa,arremesso de bola a parede,arremesso de bola a parede,Ballistic exercise
+Trainer,ACEITO participar da pesquisa, toque de cadeira com visão mono ocular,toque de cadeira com visao mono ocular,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa, simulação de gesto motor de toque de cadeira com caneleira,simulacao de gesto motor de toque de cadeira com caneleira,Propulsion Technique Drills
+Trainer,ACEITO participar da pesquisa,Brincadeiras de reação com o cone,brincadeiras de reacao com o cone,Chair Handling Skills
+Trainer,ACEITO participar da pesquisa,tiros curtos com atenção sonora,tiros curtos com atencao sonora,Sprint
+Trainer,ACEITO participar da pesquisa, pegar a bola qdo lançar,pegar a bola qdo lancar,Ballistic exercise
+Trainer,ACEITO participar da pesquisa, abdominais,abdominais,Core Strength
+Trainer,ACEITO participar da pesquisa,Ergometro ,ergometro,High-Resistance Roller Training
+Trainer,ACEITO participar da pesquisa,Abdominal lateral ,abdominal lateral,Core Strength
+Trainer,ACEITO participar da pesquisa,Flexão,flexao,Push up
