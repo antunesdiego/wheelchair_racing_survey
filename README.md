@@ -7,7 +7,7 @@
 
 This repository contains the analysis scripts, anonymized dataset, and exercise classification dictionaries for the study:
 
-> **Antunes D,Coroa ELM, Nascimento EMF, Kons RL, Lucas RD, Turnes T.** *Training Prescriptions and Perspectives in Elite Wheelchair Racing: A Survey of Brazilian Athletes and Coaches.* (Under review, 2025)
+> **Antunes D,Coroa ELM, Nascimento EMF, Kons RL, Lucas RD, Turnes T.** *Training Prescriptions and Perspectives in Elite Wheelchair Racing: A Survey of Brazilian Athletes and Coaches.* (Under review, 2026)
 
 The study investigated training practices, knowledge sources, and challenges among Brazilian elite wheelchair racing (WR) athletes (n = 28) and coaches (n = 16), using a cross-sectional survey design applied during the 2025 Brazilian Paralympic Athletics Championship.
 
