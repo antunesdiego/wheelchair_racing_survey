@@ -19,7 +19,7 @@ df_analysis <- read_csv("Paper 1/df_analysis/03_clean_data/clean_analysis_data.c
 
 df_table <- df_analysis %>%
   mutate(
-    # --- A. Padronização de Grupos ---
+    # A. standardize Group Names
     Group = case_when(
       str_detect(Group, "(?i)trainer") ~ "Coach", 
       str_detect(Group, "(?i)athlete") ~ "WR Athlete",
@@ -27,7 +27,7 @@ df_table <- df_analysis %>%
     ),
     Group = factor(Group, levels = c("WR Athlete", "Coach")),
     
-    # --- B. Efetividade (Tabela 1) ---
+    # B. Effectiveness (Unified Variable)
     Raw_Effectiveness = coalesce(D3_Prog_Effectiveness, D4_Effectiveness),
     Raw_Effectiveness = str_squish(Raw_Effectiveness),
     Unified_Effectiveness = case_when(
@@ -43,31 +43,30 @@ df_table <- df_analysis %>%
       "Effective", "Very effective"
     )),
     
-    # --- C. Conversões Gerais ---
+    # C. general data type conversions and adjustments
     B2_Age = as.numeric(B2_Age),
     B3_Experience_Years = as.numeric(B3_Experience_Years),
     Unified_Education = coalesce(C1_Education, C3_Tech_Qualification),
     Comp_Level = factor(Comp_Level, levels = c("Local", "State", "Regional", "National", "International")),
     
-    # --- D. AJUSTES FINOS (TABELA 3) ---
+    # D. adjustments for Coach-specific variables (C3, C4, C5)
     
-    # 1. Trocar "Nível" por "Level" na Qualificação
+    # 1. change C3_Tech_Qualification to English (if needed)
     C3_Tech_Qualification = str_replace_all(C3_Tech_Qualification, "(?i)nível", "Level"),
     
-    # 2. Escala de Frequência (1 a 5)
+    # 2. scale C4_SC_Info_Freq to factor with labels
     C4_SC_Info_Freq = as.numeric(C4_SC_Info_Freq),
     C4_SC_Info_Freq = factor(C4_SC_Info_Freq,
                              levels = c(1, 2, 3, 4, 5),
                              labels = c("Never", "Rarely", "Sometimes", "Commonly", "Always")),
     
-    # 3. Quem Prescreve (Lógica Corrigida)
-    # A ordem importa: S&C vem primeiro para não ser "engolido" pela regra do Coach
+    # 3. who prescribes S&C (C5_SC_Prescriber) - unify to "S&C Coach" or "Coach"
     C5_SC_Prescriber = case_when(
-      # Primeiro: Identifica S&C Coach (ou Strength Coach)
+      # first: if it contains "S&C" or "strength" (case-insensitive), label as "S&C Coach"
       str_detect(C5_SC_Prescriber, "(?i)S&C") ~ "S&C Coach",
       str_detect(C5_SC_Prescriber, "(?i)strength") ~ "S&C Coach",
       
-      # Segundo: Todo o resto (Self, Technical Coach, etc) vira apenas "Coach"
+      # second: if it contains "self", "próprio", "coach", or "treinador" (case-insensitive), label as "Coach"
       str_detect(C5_SC_Prescriber, "(?i)self") ~ "Coach",
       str_detect(C5_SC_Prescriber, "(?i)próprio") ~ "Coach",
       str_detect(C5_SC_Prescriber, "(?i)coach") ~ "Coach", 

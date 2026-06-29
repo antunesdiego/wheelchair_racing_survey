@@ -56,7 +56,7 @@ df[valid_source_cols] <- lapply(df[valid_source_cols], function(x) {
 })
 
 # =============================================================================
-# 4. PREPARE SUBSETS (RENAMING)
+# 4. PREPARE SUBSETS 
 # =============================================================================
 
 # A. Sources of Knowledge
@@ -95,7 +95,7 @@ df_physical <- df %>%
   )
 
 # =============================================================================
-# 5. PLOTTING FUNCTION (SAFE LEGEND VERSION - ENGLISH)
+# 5. PLOTTING FUNCTION 
 # =============================================================================
 
 plot_n_bars <- function(dataset, title_text, legend_title) {
@@ -119,7 +119,7 @@ plot_n_bars <- function(dataset, title_text, legend_title) {
     # Colors
     scale_fill_brewer(palette = "RdYlBu", direction = 1, name = legend_title, drop = FALSE) +
     
-    # --- LEGEND ADJUSTMENT (SAFE VERSION) ---
+    # --- LEGEND ADJUSTMENT ---
     guides(fill = guide_legend(
       reverse = FALSE,
       nrow = 2,            # Forces 2 rows (Compact and safe)
@@ -153,7 +153,7 @@ plot_n_bars <- function(dataset, title_text, legend_title) {
 }
 
 # =============================================================================
-# 6. GENERATE PLOTS (Run this again to update the objects in memory!)
+# 6. GENERATE PLOTS 
 # =============================================================================
 
 # A. Sources 
@@ -169,7 +169,7 @@ p_physical <- plot_n_bars(df_physical, "C. Importance for Physical Components", 
 p_racing <- p_racing + theme(axis.title.x = element_blank())
 
 # =============================================================================
-# 7. COMBINE AND SAVE (JSCR STANDARD)
+# 7. COMBINE AND SAVE 
 # =============================================================================
 
 # Layout: Sources (Left) | Racing (Top Right) / Physical (Bottom Right)

@@ -20,7 +20,6 @@ df_clean <- read_csv("Paper 1/df_analysis/03_clean_data/clean_analysis_data.csv"
                      show_col_types = FALSE)
 
 # 2. HELPER: TEXT NORMALIZATION & SEPARATION ----------------------------------
-# Função auxiliar para limpar e normalizar antes de classificar
 clean_and_separate <- function(data, col_name) {
   data %>%
     select(Group, ID_Col, Raw_Text = all_of(col_name)) %>%
@@ -339,57 +338,57 @@ write_csv(process_E7(df_clean), "Paper 1/df_analysis/04_exercises/E7_Performance
 message("Processing E8 (Mobility)...")
 write_csv(process_E8(df_clean), "Paper 1/df_analysis/04_exercises/E8_Mobility_Cleaned.csv")
 
-message("\n✅ MISSION ACCOMPLISHED! ALL 8 FILES SAVED!")
+message("\n MISSION ACCOMPLISHED! ALL 8 FILES SAVED!")
 
 
 ###############################################
 #Graphics for inspection - E1 Strength Exercises
 ###############################################
-# 1. Carregar os dados limpos (Gerados no Script 04)
+# 1. load Clean Data 
 df_plot <- read_csv("Paper 1/df_analysis/04_exercises/E1_Strength_Cleaned.csv", 
                     show_col_types = FALSE)
 
-# 2. Gerar o Gráfico
+# 2. Generate Plot
 ggplot(df_plot, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Group)) +
   
-  # Geometria de Barras (position = "dodge" coloca lado a lado)
+  # bars side-by-side
   geom_bar(position = position_dodge(preserve = "single"), width = 0.8) +
   
-  # Cores e Estilo
+  # style and colors
   scale_fill_viridis_d(option = "D", begin = 0.3, end = 0.8) + # Cores profissionais
   theme_classic(base_size = 14) + # Tema limpo para publicação
   
-  # Textos e Legendas
+  # labels and titles
   labs(
     title = "Top Strength Exercises Prescribed/Performed",
     subtitle = "Analysis of open-ended responses (E1)",
     x = "Frequency (n)",
-    y = NULL, # Remove o rótulo Y pois os nomes já explicam
+    y = NULL, 
     fill = "Group"
   ) +
   
-  # Ajustes finos de visualização
+  # adjustments for clarity
   theme(
-    legend.position = "top",          # Legenda em cima
-    panel.grid.major.x = element_line(color = "grey90"), # Linhas verticais suaves
-    axis.text.y = element_text(color = "black") # Texto preto forte no eixo Y
+    legend.position = "top",          
+    panel.grid.major.x = element_line(color = "grey90"), 
+    axis.text.y = element_text(color = "black") 
   )
 
 ###############################################
 #Graphics for inspection - E2 Speed Exercises
 ###############################################
 
-# 1. Carregar os dados de Velocidade
+# 1. load Clean Data (E2)
 df_plot_speed <- read_csv("Paper 1/df_analysis/04_exercises/E2_Speed_Cleaned.csv", 
                           show_col_types = FALSE)
 
-# 2. Gerar o Gráfico (Mostrando TUDO)
+# 2. generate Plot
 ggplot(df_plot_speed, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Group)) +
   
   geom_bar(position = position_dodge(preserve = "single"), width = 0.8) +
   
   scale_fill_viridis_d(option = "D", begin = 0.3, end = 0.8) + 
-  theme_classic(base_size = 12) + # Fonte um pouco menor para caber tudo
+  theme_classic(base_size = 12) + 
   
   labs(
     title = "Speed Exercises Prescribed/Performed",
@@ -402,7 +401,7 @@ ggplot(df_plot_speed, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Gro
   theme(
     legend.position = "top",
     panel.grid.major.x = element_line(color = "grey90"),
-    axis.text.y = element_text(size = 10, color = "black") # Garante leitura dos nomes
+    axis.text.y = element_text(size = 10, color = "black") 
   )
 
 
@@ -410,21 +409,21 @@ ggplot(df_plot_speed, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Gro
 #Graphics for inspection - E3 Agility Exercises
 ###############################################
 
-# 1. Carregar os dados de Agilidade Limpos
+# 1. load Clean Data (E3)
 df_plot_agility <- read_csv("Paper 1/df_analysis/04_exercises/E3_Agility_Cleaned.csv", 
                             show_col_types = FALSE)
 
-# 2. Gerar o Gráfico
+# 2. Generate Plot
 ggplot(df_plot_agility, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Group)) +
   
-  # Barras lado a lado
+  # Bars side-by-side
   geom_bar(position = position_dodge(preserve = "single"), width = 0.8) +
   
-  # Estilo profissional
+  # style and colors
   scale_fill_viridis_d(option = "D", begin = 0.3, end = 0.8) + 
   theme_classic(base_size = 14) +
   
-  # Títulos e Legendas
+  # labels and titles
   labs(
     title = "Agility Exercises Prescribed/Performed",
     subtitle = "Analysis of E3 column",
@@ -433,7 +432,7 @@ ggplot(df_plot_agility, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = G
     fill = "Group"
   ) +
   
-  # Ajustes de layout
+  # adjustments for clarity
   theme(
     legend.position = "top",
     panel.grid.major.x = element_line(color = "grey90"),
@@ -444,21 +443,21 @@ ggplot(df_plot_agility, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = G
 #Graphics for inspection - E4 Flexibility Exercises
 ###############################################
 
-# 1. Carregar os dados de Flexibilidade Limpos
+# 1. load Clean Data (E4)
 df_plot_flex <- read_csv("Paper 1/df_analysis/04_exercises/E4_Flexibility_Cleaned.csv", 
                          show_col_types = FALSE)
 
-# 2. Gerar o Gráfico
+# 2. Generate Plot
 ggplot(df_plot_flex, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Group)) +
   
-  # Barras lado a lado
+  # Bars side-by-side
   geom_bar(position = position_dodge(preserve = "single"), width = 0.8) +
   
-  # Estilo profissional
+  # style and colors
   scale_fill_viridis_d(option = "D", begin = 0.3, end = 0.8) + 
   theme_classic(base_size = 14) +
   
-  # Títulos e Legendas
+  # labels and titles
   labs(
     title = "Flexibility Methods Prescribed/Performed",
     subtitle = "Analysis of E4 column (Stretching vs. Mobility)",
@@ -467,7 +466,7 @@ ggplot(df_plot_flex, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Grou
     fill = "Group"
   ) +
   
-  # Ajustes de layout
+  # adjustments for clarity
   theme(
     legend.position = "top",
     panel.grid.major.x = element_line(color = "grey90"),
@@ -511,11 +510,11 @@ ggplot(df_plot_injury, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Gr
 ###############################################
 #Graphics for inspection - E6 Specific Training
 ###############################################
-# 1. Carregar E6
+# 1. load Clean Data (E6)
 df_plot_specific <- read_csv("Paper 1/df_analysis/04_exercises/E6_SpecificCond_Cleaned.csv", 
                              show_col_types = FALSE)
 
-# 2. Gerar Gráfico
+# 2. Generate Plot
 ggplot(df_plot_specific, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Group)) +
   geom_bar(position = position_dodge(preserve = "single"), width = 0.8) +
   scale_fill_viridis_d(option = "D", begin = 0.3, end = 0.8) + 
@@ -536,21 +535,21 @@ ggplot(df_plot_specific, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = 
 ###############################################
 #Graphics for inspection - E7 Performance Factors
 ###############################################
-# 1. Carregar E7
+# 1. load Clean Data (E7)
 df_plot_perf <- read_csv("Paper 1/df_analysis/04_exercises/E7_Performance_Cleaned.csv", 
                          show_col_types = FALSE)
 
-# 2. Gerar Gráfico
+# 2. Generate Plot
 ggplot(df_plot_perf, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Group)) +
   
-  # Barras lado a lado
+  # Bars side-by-side
   geom_bar(position = position_dodge(preserve = "single"), width = 0.8) +
   
-  # Estilo Visual (Padrão Tese)
+  # style and colors
   scale_fill_viridis_d(option = "D", begin = 0.3, end = 0.8) + 
   theme_classic(base_size = 14) +
   
-  # Textos
+  # labels and titles
   labs(
     title = "Performance Improvement Strategies",
     subtitle = "Analysis of E7 (Physical, Technical & Psychological Factors)",
@@ -559,7 +558,7 @@ ggplot(df_plot_perf, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Grou
     fill = "Group"
   ) +
   
-  # Ajustes Finos
+  # Adjustments for clarity
   theme(
     legend.position = "top",
     panel.grid.major.x = element_line(color = "grey90"),
@@ -570,11 +569,11 @@ ggplot(df_plot_perf, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Grou
 #Graphics for inspection - E8 Mobility Exercises
 ###############################################
 
-# 1. Carregar E8
+# 1. load Clean Data (E8)
 df_plot_mob <- read_csv("Paper 1/df_analysis/04_exercises/E8_Mobility_Cleaned.csv", 
                         show_col_types = FALSE)
 
-# 2. Gerar Gráfico
+# 2. Generate Plot
 ggplot(df_plot_mob, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Group)) +
   geom_bar(position = position_dodge(preserve = "single"), width = 0.8) +
   scale_fill_viridis_d(option = "D", begin = 0.3, end = 0.8) + 
@@ -594,7 +593,7 @@ ggplot(df_plot_mob, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Group
 
 
 
-#TODOS RESULTADOS
+# all results are saved in the "Paper 1/df_analysis/04_exercises" folder for further inspection and visualization.
 
 # ==============================================================================
 # FINAL VISUALIZATION: FIGURE 1 (PUBLICATION READY)
@@ -749,7 +748,7 @@ ggsave("Paper 1/df_analysis/04_exercises/FIG1_FINAL_N2.pdf",
 print(final_plot)
 
 
-# Rodar no Console para pegar os dados de texto
+# 7. QUICK CHECK: COUNT OF EXERCISES PER CATEGORY
 read_csv("Paper 1/df_analysis/04_exercises/E8_Mobility_Cleaned.csv") %>%
   count(Exercise_Category, sort = TRUE) %>%
   print()
@@ -759,9 +758,7 @@ read_csv("Paper 1/df_analysis/04_exercises/E8_Mobility_Cleaned.csv") %>%
 # 6. SAVE OUTPUT FOR JSCR (TIFF & EPS)
 # ==============================================================================
 
-# Dimensões: A4 paisagem é aprox 11.7 x 8.3 in.
-# Para JSCR, 300 dpi é o mínimo para fotos, mas para gráficos (linhas/texto)
-# o ideal é subir para 600 ou 1200 dpi para garantir que o texto não fique serrilhado.
+# dimeensions: 11.7 x 8.3 inches (A4 landscape)
 
 # A. TIFF FORMAT (High Resolution Raster)
 ggsave("Paper 1/df_analysis/04_exercises/Figure_1.tiff",
@@ -769,16 +766,15 @@ ggsave("Paper 1/df_analysis/04_exercises/Figure_1.tiff",
        width = 11.7, 
        height = 8.3, 
        units = "in",
-       dpi = 600,            # Aumentei para 600 para garantir nitidez no texto
-       compression = "lzw")  # Essencial! Sem isso o arquivo fica com 100MB+
+       dpi = 600,            
+       compression = "lzw")  
 
 # B. EPS FORMAT (Vector - Best for Editing/Printing)
-# Nota: Requer que o pacote 'svglite' ou similar esteja instalado, mas o R base geralmente aguenta.
 ggsave("Paper 1/df_analysis/04_exercises/Figure_1.eps",
        final_plot, 
        width = 11.7, 
        height = 8.3, 
        units = "in",
-       device = cairo_ps)    # 'cairo_ps' garante melhor renderização de fontes
+       device = cairo_ps)    
 
 message("Figures saved successfully in TIFF and EPS formats.")
