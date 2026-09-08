@@ -56,7 +56,7 @@ df[valid_source_cols] <- lapply(df[valid_source_cols], function(x) {
 })
 
 # =============================================================================
-# 4. PREPARE SUBSETS 
+# 4. PREPARE SUBSETS (RENAMING)
 # =============================================================================
 
 # A. Sources of Knowledge
@@ -90,12 +90,12 @@ df_physical <- df %>%
   rename(
     "Strength" = D2_Imp_Strength, "Speed/Power" = D2_Imp_SpeedPower,
     "Agility" = D2_Imp_Agility, "Flexibility" = D2_Imp_Flexibility,
-    "Injury Prev." = D2_Imp_InjuryPrev, "Rehab" = D2_Imp_Rehab,
+    "Injury Prevention" = D2_Imp_InjuryPrev, "Rehab" = D2_Imp_Rehab,
     "Mobility" = D2_Imp_Mobility
   )
 
 # =============================================================================
-# 5. PLOTTING FUNCTION 
+# 5. PLOTTING FUNCTION (SAFE LEGEND VERSION - ENGLISH)
 # =============================================================================
 
 plot_n_bars <- function(dataset, title_text, legend_title) {
@@ -119,7 +119,7 @@ plot_n_bars <- function(dataset, title_text, legend_title) {
     # Colors
     scale_fill_brewer(palette = "RdYlBu", direction = 1, name = legend_title, drop = FALSE) +
     
-    # --- LEGEND ADJUSTMENT ---
+    # --- LEGEND ADJUSTMENT (SAFE VERSION) ---
     guides(fill = guide_legend(
       reverse = FALSE,
       nrow = 2,            # Forces 2 rows (Compact and safe)
@@ -153,7 +153,7 @@ plot_n_bars <- function(dataset, title_text, legend_title) {
 }
 
 # =============================================================================
-# 6. GENERATE PLOTS 
+# 6. GENERATE PLOTS (Run this again to update the objects in memory!)
 # =============================================================================
 
 # A. Sources 
@@ -169,7 +169,7 @@ p_physical <- plot_n_bars(df_physical, "C. Importance for Physical Components", 
 p_racing <- p_racing + theme(axis.title.x = element_blank())
 
 # =============================================================================
-# 7. COMBINE AND SAVE 
+# 7. COMBINE AND SAVE
 # =============================================================================
 
 # Layout: Sources (Left) | Racing (Top Right) / Physical (Bottom Right)
