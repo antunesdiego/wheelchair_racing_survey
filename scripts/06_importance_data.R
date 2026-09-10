@@ -187,7 +187,7 @@ output_path <- "Paper 1/df_analysis/04_outputs"
 dir.create(output_path, showWarnings = FALSE)
 
 # Save TIFF (600 dpi, LZW compression - Standard for Printing)
-ggsave(file.path(output_path, "Figure_2.tiff"),
+ggsave(file.path(output_path, "Figure_1.tiff"),
        final_fig, 
        width = 11.7, 
        height = 8.3, 
@@ -197,7 +197,7 @@ ggsave(file.path(output_path, "Figure_2.tiff"),
        bg = "white")
 
 # Save EPS (Vector - Standard for Editing)
-ggsave(file.path(output_path, "Figure_2.eps"),
+ggsave(file.path(output_path, "Figure_1.eps"),
        final_fig, 
        width = 11.7, 
        height = 8.3, 
@@ -205,5 +205,5 @@ ggsave(file.path(output_path, "Figure_2.eps"),
        device = cairo_ps, 
        bg = "white")
 
-message("Figure 2 successfully updated and saved.")
+message("Figure 1 successfully updated and saved.")
 print(final_fig)

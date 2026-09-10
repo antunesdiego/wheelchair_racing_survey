@@ -61,6 +61,41 @@ df <- df %>%
     Group = factor(Group, levels = c("WR Athlete", "Coach"))
   )
 
+# Reorder sport classes
+df <- df %>%
+  mutate(
+    C2_Classification = factor(C2_Classification,
+                               levels = c("T33", "T34",
+                                          "T52", "T53", "T54"))
+  )
+
+# Create Eligible Impairment
+df <- df %>%
+  mutate(
+    Eligible_Impairment = case_when(
+      C2_Classification %in% c("T33", "T34")                          ~ "Hypertonia / Ataxia / Athetosis",
+      C2_Classification %in% c("T52", "T53", "T54") &
+        C4_Impairment_ICD %in% c("Amputation",
+                                  "Congenital malformations")         ~ "Limb Deficiency",
+      C2_Classification %in% c("T52", "T53", "T54")                  ~ "Impaired Muscle Power",
+      TRUE ~ NA_character_
+    )
+  )
+
+# Create Distance Group
+df <- df %>%
+  mutate(
+    Distance_Group = case_when(
+      str_detect(C3_Distance, "5000m|10000m|Maratona|Meia Maratona") ~ "Long-distance (≥5000m)",
+      str_detect(C3_Distance, "800m|1500m")                          ~ "Middle-distance (800–1500m)",
+      TRUE                                                            ~ "Sprint (100–400m)"
+    )
+  )
+
+# Remove "Other" from technology
+df <- df %>%
+  mutate(C12_Tech_Available = na_if(C12_Tech_Available, "Other"))
+
 df_athletes <- df %>% filter(Group == "WR Athlete")
 df_coaches  <- df %>% filter(Group == "Coach")
 ```
@@ -179,9 +214,10 @@ A Tabela 2 detalha a classificação esportiva, tipo de deficiência, distância
 ```{r table2}
 df_athletes %>%
   mutate(
-    Sport_Class  = factor(C2_Classification,
-                          levels = c("T52","T53","T54","T33","T34")),
-    Impairment   = factor(C4_Impairment_ICD),
+    Eligible_Impairment = factor(Eligible_Impairment,
+                                 levels = c("Impaired Muscle Power",
+                                            "Limb Deficiency",
+                                            "Hypertonia / Ataxia / Athetosis")),
     Prescriber   = factor(C6_Prescriber),
     Chair_Origin = factor(C8_Chair_Origin,
                           levels = c("Customized", "Collective use")),
@@ -191,18 +227,21 @@ df_athletes %>%
     Wheel_Type   = factor(C10_Wheel_Type),
     Roller       = factor(C11_Roller_Available, levels = c("Yes","No"))
   ) %>%
-  select(Sport_Class, Impairment, Prescriber,
-         Chair_Origin, Maintenance, Glove_Type, Wheel_Type, Roller) %>%
+  select(C2_Classification, C4_Impairment_ICD, Eligible_Impairment,
+         Distance_Group, Prescriber, Chair_Origin, Maintenance,
+         Glove_Type, Wheel_Type, Roller) %>%
   tbl_summary(
     label = list(
-      Sport_Class  ~ "Sport Class / Classe Esportiva",
-      Impairment   ~ "Impairment Type / Tipo de Deficiência",
-      Prescriber   ~ "Training Prescriber / Prescritor do Treinamento",
-      Chair_Origin ~ "Racing Chair Origin / Origem da Cadeira",
-      Maintenance  ~ "WR Maintenance / Manutenção da Cadeira",
-      Glove_Type   ~ "Glove Type / Tipo de Luva",
-      Wheel_Type   ~ "Wheel Type / Tipo de Roda",
-      Roller       ~ "Access to Rollers / Acesso a Rolo"
+      C2_Classification   ~ "Sport Class / Classe Esportiva",
+      C4_Impairment_ICD   ~ "Underlying Health Condition / Condição de Saúde",
+      Eligible_Impairment ~ "Eligible Impairment / Deficiência Elegível (World Para Athletics)",
+      Distance_Group      ~ "Event Distance Profile / Perfil de Distância",
+      Prescriber          ~ "Training Prescriber / Prescritor do Treinamento",
+      Chair_Origin        ~ "Racing Chair Origin / Origem da Cadeira",
+      Maintenance         ~ "WR Maintenance / Manutenção da Cadeira",
+      Glove_Type          ~ "Glove Type / Tipo de Luva",
+      Wheel_Type          ~ "Wheel Type / Tipo de Roda",
+      Roller              ~ "Access to Rollers / Acesso a Rolo"
     ),
     statistic = list(all_categorical() ~ "{n} ({p}%)"),
     missing = "no"
@@ -228,24 +267,37 @@ A Tabela 3 apresenta os perfis profissionais dos treinadores, incluindo funçõe
 
 ```{r table3}
 table3 <- tribble(
-  ~Characteristic,                                              ~n,   ~pct,
-  "**Role in the Team / Função na Equipe**",                   NA_integer_, NA_character_,
-  "Head Coach",                                                14L,  "88%",
-  "Assistant Coach",                                            1L,  "6.3%",
-  "Strength and Conditioning Coach",                            1L,  "6.3%",
-  "**National Certification Level (CPB)**",                    NA_integer_, NA_character_,
-  "Level 1",                                                    3L,  "19%",
-  "Level 2",                                                    5L,  "31%",
-  "Level 3",                                                    8L,  "50%",
-  "**Frequency of S&C Information Search / Frequência de Busca**", NA_integer_, NA_character_,
-  "Never / Nunca",                                              0L,  "0%",
-  "Rarely / Raramente",                                         0L,  "0%",
-  "Sometimes / Às vezes",                                       3L,  "19%",
-  "Commonly / Frequentemente",                                  9L,  "56%",
-  "Always / Sempre",                                            4L,  "25%",
-  "**Who Prescribes S&C / Quem Prescreve o T&C**",            NA_integer_, NA_character_,
-  "Coach / Treinador",                                         13L,  "81%",
-  "S&C Coach / Especialista em T&C",                           3L,  "19%"
+  ~Characteristic,                                                    ~n,          ~pct,
+  "**Role in the Team / Função na Equipe**",                          NA_integer_, NA_character_,
+  "Head Coach",                                                       14L,         "88%",
+  "Assistant Coach",                                                   1L,         "6.3%",
+  "Strength and Conditioning Coach",                                   1L,         "6.3%",
+  "**National Certification Level (Level 1–3)**",                     NA_integer_, NA_character_,
+  "Level 1 (introductory)",                                            3L,         "19%",
+  "Level 2 (intermediate)",                                            5L,         "31%",
+  "Level 3 (advanced)",                                                8L,         "50%",
+  "**Frequency of S&C Information Search / Frequência de Busca**",   NA_integer_, NA_character_,
+  "Never / Nunca",                                                     0L,         "0%",
+  "Rarely / Raramente",                                                0L,         "0%",
+  "Sometimes / Às vezes",                                              3L,         "19%",
+  "Commonly / Frequentemente",                                         9L,         "56%",
+  "Always / Sempre",                                                   4L,         "25%",
+  "**Who Prescribes S&C / Quem Prescreve o T&C**",                   NA_integer_, NA_character_,
+  "Coach / Treinador",                                                13L,         "81%",
+  "S&C Coach / Especialista em T&C",                                   3L,         "19%",
+  "**Load Monitoring — Performance Execution**",                      NA_integer_, NA_character_,
+  "Isometric Strength",                                                4L,         "25%",
+  "Coordination and Motor Test",                                       3L,         "19%",
+  "Plyometric with Arms",                                              2L,         "13%",
+  "GPS Device (Speed)",                                                2L,         "13%",
+  "**Load Monitoring — Performance Outcome**",                        NA_integer_, NA_character_,
+  "Rate of Perceived Exertion (RPE)",                                 11L,         "69%",
+  "Training Session Time",                                            11L,         "69%",
+  "Performance Test with Ballistic Exercises",                         8L,         "50%",
+  "Speed",                                                             7L,         "44%",
+  "Distance",                                                          5L,         "31%",
+  "Heart Rate",                                                        4L,         "25%",
+  "% of Competitive Performance",                                      4L,         "25%"
 )
 
 table3 %>%
@@ -261,49 +313,9 @@ table3 %>%
   kable_styling(full_width = TRUE, font_size = 11) %>%
   row_spec(which(is.na(as.integer(table3$n))), bold = TRUE, background = "#f5f5f5") %>%
   footnote(
-    general       = "N = 16 coaches; CPB = Brazilian Paralympic Committee / Comitê Paralímpico Brasileiro",
+    general       = "N = 16 coaches; Level 1 = introductory, Level 2 = intermediate, Level 3 = advanced certification (Brazilian Paralympic Committee). Load monitoring: multiple responses allowed / respostas múltiplas permitidas.",
     general_title = ""
   )
-```
-
-### Load Monitoring Methods / Métodos de Monitoramento de Carga
-
-::: {.columns}
-::: {.column width="50%"}
-The table below details the specific load monitoring methods used by coaches (multiple responses allowed).
-:::
-::: {.column width="50%"}
-A tabela abaixo detalha os métodos específicos de monitoramento de carga utilizados pelos treinadores (respostas múltiplas permitidas).
-:::
-:::
-
-```{r table3b}
-# Load monitoring — checklist (multiple response)
-methods <- tribble(
-  ~Method,                                              ~n,  ~pct,
-  "Rate of Perceived Exertion (RPE) / PSE",            11L, "69%",
-  "Training session time / Duração da sessão",         11L, "69%",
-  "Performance test with ballistic exercises",          8L, "50%",
-  "Speed / Velocidade",                                 7L, "44%",
-  "Distance / Distância",                               5L, "31%",
-  "Heart Rate / Frequência Cardíaca",                   4L, "25%",
-  "Isometric Strength / Força Isométrica",              4L, "25%",
-  "% of competitive performance",                       4L, "25%",
-  "Coordination and motor test",                        3L, "19%",
-  "Others / Outros",                                    3L, "19%",
-  "Plyometric with arms / Pliometria com braços",       2L, "13%",
-  "GPS Device",                                         2L, "13%"
-)
-
-methods %>%
-  kable(
-    col.names = c("Method / Método", "n", "%"),
-    booktabs = TRUE,
-    align = c("l","c","c")
-  ) %>%
-  kable_styling(full_width = TRUE, font_size = 11) %>%
-  footnote(general = "N = 16 coaches; multiple responses allowed / N = 16 treinadores; respostas múltiplas permitidas",
-           general_title = "")
 ```
 
 ---
@@ -319,7 +331,7 @@ A Figura 1 apresenta as fontes de conhecimento dos atletas e a importância perc
 :::
 :::
 
-```{r fig1, fig.width=10, fig.height=7}
+```{r fig1, fig.width=12, fig.height=8}
 knitr::include_graphics(here::here("outputs", "Figure_1.png"))
 ```
 
@@ -336,7 +348,7 @@ A Figura 2 ilustra as preferências de exercícios relatadas por atletas e trein
 :::
 :::
 
-```{r fig2, fig.width=10, fig.height=8}
+```{r fig2, fig.width=16, fig.height=10}
 knitr::include_graphics(here::here("outputs", "Figure_2.png"))
 ```
 

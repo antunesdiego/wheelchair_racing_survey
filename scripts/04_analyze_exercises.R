@@ -594,7 +594,7 @@ ggplot(df_plot_mob, aes(y = fct_rev(fct_infreq(Exercise_Category)), fill = Group
 #All graphics are now generated and ready for inspection. The next step is to create a final publication-ready figure that combines all 7 domain panels along with a legend/info box, ensuring that only exercises with a total frequency of 2 or more are included. This will provide a clear and concise visual summary of the exercise categories across different groups.
 
 # ==============================================================================
-# FINAL VISUALIZATION: FIGURE 1 (PUBLICATION READY)
+# FINAL VISUALIZATION: FIGURE 2 (PUBLICATION READY)
 # Filter: Total Frequency >= 2 (Removes singletons)
 # Layout: 7 Domain Panels + 1 Legend/Info Box
 # ==============================================================================
@@ -757,10 +757,10 @@ final_plot <- cowplot::plot_grid(
 
 # 6. SAVE OUTPUT
 # Saving as PNG (High Res) and PDF (Vector)
-ggsave("Paper 1/df_analysis/04_exercises/FIG1_FINAL_N2.png", 
+ggsave("Paper 1/df_analysis/04_exercises/FIG2_FINAL_N2.png", 
        final_plot, width = 16, height = 10, dpi = 300)
 
-ggsave("Paper 1/df_analysis/04_exercises/FIG1_FINAL_N2.pdf", 
+ggsave("Paper 1/df_analysis/04_exercises/FIG2_FINAL_N2.pdf", 
        final_plot, width = 16, height = 10)
 
 # Display in RStudio
@@ -780,7 +780,7 @@ read_csv("Paper 1/df_analysis/04_exercises/E8_Mobility_Cleaned.csv") %>%
 # Dimensions: A4 paisagem é aprox 11.7 x 8.3 in.
 
 # A. TIFF FORMAT (High Resolution Raster)
-ggsave("Paper 1/df_analysis/04_exercises/Figure_1.tiff",
+ggsave("Paper 1/df_analysis/04_exercises/Figure_2.tiff",
        final_plot, 
        width = 16, 
        height = 10, 
@@ -789,7 +789,7 @@ ggsave("Paper 1/df_analysis/04_exercises/Figure_1.tiff",
        compression = "lzw")  
 
 # B. EPS FORMAT (Vector - Best for Editing/Printing)
-ggsave("Paper 1/df_analysis/04_exercises/Figure_1.eps",
+ggsave("Paper 1/df_analysis/04_exercises/Figure_2.eps",
        final_plot, 
        width = 16, 
        height = 10, 
