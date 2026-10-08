@@ -19,7 +19,7 @@ The study investigated training practices, knowledge sources, and challenges amo
 wheelchair_racing_survey/
 │
 ├── data/
-│   ├── clean_analysis_data.csv       # Fully anonymized dataset (athletes + coaches)
+│   ├── clean_analysis_data.csv       # Available upon request (not tracked in repo)
 │   └── exercises/
 │       ├── raw_exercise_list.csv     # Raw open-ended exercise responses
 │       ├── E1_Strength_Cleaned.csv
@@ -96,7 +96,7 @@ R version and package dependencies will be added via `renv` in a future update.
 
 ## Data Availability
 
-The fully anonymized dataset is available both in this repository and on the Open Science Framework (OSF):
+The anonymized dataset (`clean_analysis_data.csv`) is available upon reasonable request to the corresponding author. The OSF project page contains the survey instruments and supplementary materials.
 
 > [https://osf.io/79yqp](https://osf.io/79yqp)
 
