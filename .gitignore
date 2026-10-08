@@ -1,5 +1,4 @@
-# Force-include anonymized data files (safe for public release)
-!data/clean_analysis_data.csv
+# Force-include exercise classification dictionaries (no participant data)
 !data/exercises/*.csv
 
 # ============================================================
