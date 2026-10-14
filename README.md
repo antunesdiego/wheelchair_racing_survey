@@ -7,7 +7,7 @@
 
 This repository contains the analysis scripts, anonymized dataset, and exercise classification dictionaries for the study:
 
-> **Antunes D,Coroa ELM, Nascimento EMF, Kons RL, Lucas RD, Turnes T.** *Training Prescriptions and Perspectives in Elite Wheelchair Racing: A Survey of Brazilian Athletes and Coaches.* (Under review, 2026)
+> **Antunes D, Coroa ELM, Nascimento EMF, Kons RL, Lucas RD, Turnes T.** *Training Prescriptions and Perspectives in Elite Wheelchair Racing: A Survey of Brazilian Athletes and Coaches.* *Int J Sports Sci Coach*, 2026.
 
 The study investigated training practices, knowledge sources, and challenges among Brazilian elite wheelchair racing (WR) athletes (n = 28) and coaches (n = 16), using a cross-sectional survey design applied during the 2025 Brazilian Paralympic Athletics Championship.
 
@@ -41,9 +41,9 @@ wheelchair_racing_survey/
 │   └── Figure_2.tiff                 # Exercise preferences by group
 │
 └── supplementary/
-    ├── SDC1_surveys.docx             # Survey instruments (Portuguese)
-    ├── SDC2_CHERRIES.docx            # CHERRIES reporting checklist
-    └── SDC3_CROSS.docx              # CROSS reporting checklist
+    ├── SDC1_supplementary_material_surveys.docx    # Survey instruments (Portuguese)
+    ├── SDC2_supplementary_material_CHERRIES.docx   # CHERRIES reporting checklist
+    └── SDC3_supplementary_material_CROSS.docx      # CROSS reporting checklist
 ```
 
 ---
@@ -96,11 +96,9 @@ R version and package dependencies will be added via `renv` in a future update.
 
 ## Data Availability
 
-The anonymized dataset (`clean_analysis_data.csv`) is available upon reasonable request to the corresponding author. The OSF project page contains the survey instruments and supplementary materials.
+The anonymized dataset (`clean_analysis_data.csv`) is available upon reasonable request to the corresponding author. Survey instruments and supplementary materials are available on the OSF project page:
 
 > [https://osf.io/79yqp](https://osf.io/79yqp)
-
-The OSF project also contains the complete survey instruments and supplementary materials.
 
 ---
 
@@ -115,8 +113,9 @@ This study was approved by the Ethics Committee of the Federal University of San
 If you use these data or scripts, please cite:
 
 ```
-Antunes D, Coroa ELM, Nascimento EMF, Kons RL, Lucas RD, Turnes T. Training Prescriptions and Perspectives in Elite 
-Wheelchair Racing: A Survey of Brazilian Athletes and Coaches. [Journal name], 2026.
+Antunes D, Coroa ELM, Nascimento EMF, Kons RL, Lucas RD, Turnes T. Training Prescriptions and 
+Perspectives in Elite Wheelchair Racing: A Survey of Brazilian Athletes and Coaches. 
+Int J Sports Sci Coach, 2026.
 ```
 
 ---

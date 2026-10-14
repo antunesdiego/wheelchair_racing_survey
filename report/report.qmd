@@ -410,15 +410,15 @@ Este estudo foi aprovado pelo Comitê de Ética da Universidade Federal de Santa
 
 ::: {.columns}
 ::: {.column width="50%"}
-The fully anonymized dataset and annotated R scripts are openly available:
+The anonymized dataset is available upon reasonable request to the corresponding author. Annotated R scripts and supplementary materials are openly available at:
 
-- **GitHub:** https://github.com/antunesdiego/wheelchair_racing_survey  
+- **GitHub:** https://github.com/antunesdiego/wheelchair_racing_survey
 - **OSF:** https://osf.io/79yqp
 :::
 ::: {.column width="50%"}
-O conjunto de dados completamente anonimizado e os scripts R anotados estão disponíveis abertamente:
+O conjunto de dados anonimizado está disponível mediante solicitação ao autor correspondente. Os scripts R anotados e os materiais suplementares estão disponíveis abertamente em:
 
-- **GitHub:** https://github.com/antunesdiego/wheelchair_racing_survey  
+- **GitHub:** https://github.com/antunesdiego/wheelchair_racing_survey
 - **OSF:** https://osf.io/79yqp
 :::
 :::
